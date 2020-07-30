@@ -28,12 +28,9 @@
 			</div>
 			<div class="menu_social">
 				<ul>
-					<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+				<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 				</ul>
 			</div>
 		</div>
@@ -68,19 +65,17 @@
 								<li><a href="contact.php">Contact</a></li>
 								<li><a href="#">User Login</a>
 									<ul class="nav-dropdown">
-										<li><a href="login/drlogin.php">Doctor's Login</a></li>
+										<li><a href="login/maintainence.php">Doctor's Login</a></li>
 										<li><a href="login/patientlogin.php">Patient's Login</a></li>
 										<li><a href="login/admin/index.php">Admin Login</a></li>
 									</ul>
 								</li>
 								<li><a href="#">Sign-Up</a>
 									<ul class="nav-dropdown">
-										<li><a href="Signup/doctorsignup/signupdoctor.php">As a Doctor</a></li>
+										<li><a href="login/maintainence.php">As a Doctor</a></li>
 										<li><a href="Signup/patientsignup/signuppateint.php">As a Patient</a></li>
 									</ul>
-								</li>
-	
-	
+								</li>		
 							</ul>
 						</nav>
 					</div>
@@ -204,7 +199,7 @@
 								Copyright &copy;
 								<script>document.write(new Date().getFullYear());
 								</script> 
-								All rights reserved | This project is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by Akramul and Malav</a>
+								All rights reserved | This project is made by Akramul and Malav</a>
 							</div>
 						</div>
 					</div>
