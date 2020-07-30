@@ -6,7 +6,7 @@ if(mysqli_connect_errno()){
     echo "Failed to connect to MySQL:" . mysqli_connect_error();
 }
 function site_url($data=false){
-    return 'http://'.$_SERVER['HTTP_HOST'].'/ProjectLatestNew/Project/Signup/patientsignup'.$data;
+    return 'http://'.$_SERVER['HTTP_HOST'].'/ProjectLatestNew/HospitalManagementSystem/Project/Signup/patientsignup'.$data;
 }
 
 
