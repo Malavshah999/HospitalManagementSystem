@@ -31,6 +31,7 @@
 			<ul>
 				<li class="menu_item"><a href="index.php">Home</a></li>
 				<li class="menu_item"><a href="#">About us</a></li>
+				
 				<li class="menu_item"><a href="contact.php">Contact</a></li>
 			</ul>
 
@@ -39,7 +40,10 @@
 		<div class="menu_social">
 			<ul>
 				<li><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-				<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+			
+				<li><a href="#"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+			
+
 				<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
 				<li><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
@@ -134,61 +138,37 @@
 			<br><div class="row">
 				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
 					<div class="doctor">
-						<div class="staff-img" style="background-image: url(images/staff-4.jpg);"></div>
+						<div class="staff-img" style="background-image: url(images/Dr.ashwinBMehta.jpg);"></div>
 						<div class="desc">
-							<h3>Dr. Beatrice Prior</h3>
-							<span>Dental Hygienist</span>
-							<ul class="colorlib-social">
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
-								<li><a href="#"><i class="icon-twitter2"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
+							<h3>Dr.Ashwin B Mehta</h3>
+							<span>Cardiology</span>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
+					<div class="doctor">
+						<div class="staff-img" style="background-image: url(images/Dr.PurushottamVashistha.jpg);"></div>
+						<div class="desc">
+							<h3> Dr. Purushottam Vashistha</h3>
+							<span>Gastroenterology</span>
+							</div>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
+					<div class="doctor">
+						<div class="staff-img" style="background-image: url(images/Neurology-SVenkataraman-New-Delhi-8b04dd.jpg);"></div>
+						<div class="desc">
+							<h3>Dr.S Venkataraman</h3>
+							<span>Neurology</span>
 						</div>
 					</div>
 				</div>
 				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
 					<div class="doctor">
-						<div class="staff-img" style="background-image: url(images/staff-2.jpg);"></div>
+						<div class="staff-img" style="background-image: url(images/dr-dinesh.jpg);"></div>
 						<div class="desc">
-							<h3>Dr. Edward Dughlas</h3>
-							<span>Orthopedic Surgeon</span>
-							<ul class="colorlib-social">
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
-								<li><a href="#"><i class="icon-twitter2"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
-					<div class="doctor">
-						<div class="staff-img" style="background-image: url(images/staff-3.jpg);"></div>
-						<div class="desc">
-							<h3>Dr. Peter Parker</h3>
-							<span>Health Care</span>
-							<ul class="colorlib-social">
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
-								<li><a href="#"><i class="icon-twitter2"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-				<div class="col-md-3 col-sm-6 col-xs-12 animate-box text-center">
-					<div class="doctor">
-						<div class="staff-img" style="background-image: url(images/staff-1.jpg);"></div>
-						<div class="desc">
-							<h3>Dr. Liza Thomas</h3>
-							<span>Patient Services Manager</span>
-							<ul class="colorlib-social">
-								<li><a href="#"><i class="icon-facebook2"></i></a></li>
-								<li><a href="#"><i class="icon-twitter2"></i></a></li>
-								<li><a href="#"><i class="icon-linkedin2"></i></a></li>
-								<li><a href="#"><i class="icon-instagram"></i></a></li>
-							</ul>
+							<h3>Dr. Dinesh Kansal</h3>
+							<span>Gynaecologist</span>
 						</div>
 					</div>
 				</div>
@@ -344,7 +324,7 @@
 
 								<!-- Slide -->
 								<div class="owl-item dept_item">
-									<div class="dept_image"><img src="images/dept_4.jpg" height="268" alt=""></div>
+									<div class="dept_image"><img src="images/pic_medical-lab_LTG_350x250_72_01.jpg" height="268" alt=""></div>
 									<div class="dept_content">
 										<div class="dept_title">Laboratory</div>
 											</div>
