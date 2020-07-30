@@ -7,7 +7,7 @@ include './common/public_header.php' ;
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Registration Form</title>
+	<title>Signup_Patient's Form</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- LINEARICONS -->
 	<link rel="stylesheet" href="fonts/linearicons/style.css">	
@@ -24,31 +24,39 @@ include './common/public_header.php' ;
 					<span class="lnr lnr-user"></span>
 					<input class="form-control" id="fullname"  type="text" name="fullname" placeholder="Full Name" required  >
 				</div>			
+
 				
 				<div class="form-holder">
 					<span class="lnr lnr-phone-handset"></span>
 					<input class="form-control" id="phonenumber"  type="text" name="phonenumber" placeholder="phonenumber" required >
 				</div>
+
 				
 				<div class="form-holder">
 					<span class="lnr lnr-envelope"></span>
 					<input name="email" type="email" class="form-control" id="exampleInputEmail" placeholder="Email Address" value="" required >
 				</div>
 
+
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
 					<input name="password" type="password" class="form-control" id="exampleInputPassword" placeholder="Password" required >
 				</div>
 
+
+
 				<div class="form-holder">
 					<span class="lnr lnr-lock"></span>
 					<input name="pw_confirm" type="password" class="form-control" id="exampleRepeatPassword" placeholder="Repeat Password" required >                              
 				</div>
+
 				
 				<button>
 					<span>Register</span>
 				</button>
 			</form>
+
+
 			<img src="images/image-2.png" alt="" class="image-2">
 			<!-- Display warnings here -->
 			<p>
@@ -62,7 +70,5 @@ include './common/public_header.php' ;
 			</p>
 		</div>
 	</div>
-	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/main.js"></script>
 </body>
 </html>
