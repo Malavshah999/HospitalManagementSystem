@@ -113,7 +113,7 @@
 				<div class="doctor">
 					<div class="staff-img" style="background-image: url(images/dr-dinesh.jpg);"></div>
 					<div class="desc">
-						<h3>Dr. Dinesh Kansal</h3>
+						<h3>Dr. Dineshi Kansal</h3>
 						<span>Gynaecologist</span>
 					</div>
 				</div>
