@@ -1,6 +1,6 @@
 <?php 
 session_start();
-include './common/public_header.php' ;
+include './controllers/db_connection.php' ;
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@ include './common/public_header.php' ;
 	<div class="wrapper">
 		<div class="inner">
 			
-			<form action="<?php echo site_url('/controllers/signup.php'); ?>"  class="user" method="POST">
+			<form action="../patientsignup/controllers/signup.php"  class="user" method="POST">
                 <h3>Patient's Signup</h3>
 				<div class="form-holder">
 					<span class="lnr lnr-user"></span>
