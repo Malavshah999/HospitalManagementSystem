@@ -6,7 +6,6 @@ include './common/public_header.php' ;
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
 	<title>Signup_Patient's Form</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- LINEARICONS -->
@@ -58,7 +57,7 @@ include './common/public_header.php' ;
 
 
 			<img src="images/image-2.png" alt="" class="image-2">
-			<!-- Display warnings here -->
+			
 			<p>
 				<?php
 					if(!empty($_SESSION['signup_errors'])){

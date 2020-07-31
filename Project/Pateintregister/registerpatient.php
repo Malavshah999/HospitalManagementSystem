@@ -1,8 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<title>New Patient Registration</title>
 </head>
@@ -11,18 +9,18 @@
 		<div class="title">
 			New Patient Registration
 		</div>
-		<h5> Please fill in the form below </h5>
+		<h5> Please fill in the patient details below </h5>
 		<br>
 		<div class="form">       
 			<form action="connect.php"method="post">
 				<div class="inputfield">
 					<label for="name">FullName</label>
-					<input type="text" class="input" name="name">
+					<input type="text" class="input" name="name" required>
 				</div> 
 			
 				<div class="inputfield">
 					<label for="email">Email Address</label>
-					<input type="text" class="input" name="email">
+					<input type="text" class="input" name="email" required>
 				</div>  
 			
 				<div class="inputfield">
@@ -38,34 +36,33 @@
 				</div> 
 				<div class="inputfield">
 					<label for="birthday">Date Of Birth</label>
-					<input type="date" class="input" name="birthday">
-
+					<input type="date" class="input" name="birthday" required>
 				</div>
 
 				<div class="inputfield">
 					<label for="Height">Height(Inches)</label>
-					<input type="text" class="input" name="Height">
+					<input type="text" class="input" name="Height" required>
 				</div>  
 
 				<div class="inputfield">
-					<label for="weight">weight(Pounds)</label>
-					<input type="text" class="input"name="weight">
+					<label for="weight">Weight(Pounds)</label>
+					<input type="text" class="input"name="weight" required> 
 				</div>  
 				<hr>
 				<br>
 				
 				<div class="inputfield">
 					<label for="Contact" >Contact Number</label>
-					<input type="text" class="input" name="Contact">
+					<input type="text" class="input" name="Contact" required>
 				</div>  
 				
 				<div class="inputfield">
 					<label for="Marital">Marital Status</label>
-					<div class="custom_select">
+					<div class="custom_select" required>
 						<select name="Marital">
 							<option value=""></option>
 							<option value="Single">Single</option>
-							<option value="married">married</option>
+							<option value="married">Married</option>
 							<option value="Divorced">Divorced</option>
 							<option value="LegallySeparated">Legally Separated</option>
 							<option value="Widowed">Widowed</option>
@@ -75,45 +72,51 @@
     
 				<div class="inputfield">
 					<label for="textarea">Address</label>
-					<textarea class="textarea" name="textarea"></textarea>
+					<textarea class="textarea" name="textarea" required></textarea>
 				</div> 
 				<hr>
 				<br>
-				<p style="color:blue;">In case Of emergency.....</p>
-				<br> 
+				
 				<div class="inputfield">
-					<label for="f2name">Full  Name</label>
-					<input type="text" class="input" name="f2name">
-				</div> 
+					<label for="disease" >Disease</label>
+					<input type="text" class="input" name="disease" required>
+				</div>  
+				
+				<div class="inputfield">
+					<label for="surgeries" >Past surgeries </label>
+					<input type="text" class="input" name="surgeries" placeholder="Type 'Na' if None" required>
+				</div>
 
 				<div class="inputfield">
-					<label for="Relationship">Relationship</label>
-					<input type="text" class="input" name="Relationship">
-				</div> 
-
+					<label for="phobia">Phobias </label>
+					<input type="text" class="input" name="phobia" placeholder="Type 'Na' if None" required>
+				</div>  
+				
 				<div class="inputfield">
-					<label for="Contact2">Contact Number</label>
-					<input type="text" class="input" name="Contact2">
+					<label for="medics"> Ongoing Medications </label>
+					<input type="text" class="input" name="medics" placeholder="Type 'Na' if None" required>
 				</div> 
-
-				<div class="inputfield">
-					<label for="Postal">Postal Code</label>
-					<input type="text" class="input" name="Postal">
-				</div> 
-			
+				<br>
 				<div class="inputfield terms">
 					<label class="check">
-						<input type="checkbox">
+						<input type="checkbox" required>
 						<span class="checkmark"></span>
 					</label>
 					<p>Agreed to terms and conditions</p>
 				</div> 
-
+				<div class="inputfield">
+					<a href="emergency.php" style="color: red; text-decoration:none ;">In case of emergency ➤</a>
+				</div>
 				<div class="inputfield">
 					<input type="submit" value="Register" class="btn">
 				</div>
 			</form>	
 		</div>
+		<br>
+		<div>
+			<input type="button" onclick="location.href = '../index.php';" class="btn-primary" value="Back to home">
+		</div>	
 	</div>	
+	
 </body>
 </html>
