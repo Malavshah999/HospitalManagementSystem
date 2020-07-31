@@ -53,6 +53,7 @@ include './controllers/db_connection.php' ;
 				<button>
 					<span>Register</span>
 				</button>
+
 			</form>
 
 

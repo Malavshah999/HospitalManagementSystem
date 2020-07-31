@@ -35,7 +35,7 @@ a {
 
 :focus {
   outline: none; }
-
+	
 .wrapper {
   min-height: 100vh;
   display: flex;
@@ -171,6 +171,8 @@ button {
   button:hover:before, button:hover:after {
     -webkit-transform: translate(0, 0);
     transform: translate(0, 0); }
+	
+
 
 @media (max-width: 991px) {
   .inner {
