@@ -69,6 +69,7 @@ if(count($signup_errors) > 0){
     // Redirect to Home Dashboard
      echo"<script> location.href='../../../login/patientlogin.php'</script>";
 }
+?>
 
 
 

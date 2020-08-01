@@ -7,7 +7,6 @@ include './controllers/db_connection.php' ;
 <html>
 <head>
 	<title>Signup_Patient's Form</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- LINEARICONS -->
 	<link rel="stylesheet" href="fonts/linearicons/style.css">	
 	<!-- STYLE CSS -->

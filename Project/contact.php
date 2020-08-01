@@ -15,30 +15,10 @@
 
 <body>
 	<div class="super_container">
-		<!-- Menu -->
-
-		<div class="menu trans_500">
-			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-				<div class="menu_close_container"><div class="menu_close"></div></div>
-				<ul>
-					<li class="menu_item"><a href="index.php">Home</a></li>
-					<li class="menu_item"><a href="#">About us</a></li>
-					<li class="menu_item"><a href="contact.php">Contact</a></li>
-				</ul>
-			</div>
-			<div class="menu_social">
-				<ul>
-				<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-				<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-				<li><a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		</div>
-	
 		<!-- Home -->
 
 		<div class="home">
-			<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" data-speed="0.8">
+			<div class="parallax_background parallax-window"   data-image-src="images/box_3.jpg" data-parallax="scroll" >
 			</div>
 			
 			<!-- Header -->
@@ -53,7 +33,7 @@
 				<section class="navigation">
 					<div class="nav-container">
 						<div class="brand">
-							<a href="">LOGO</a>
+							<a href="index.php">LOGO</a>
 						</div>
 						<nav>
 							<div class="nav-mobile">
@@ -89,7 +69,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_content">
-						<div class="home_title">Contact</div>
+						<div class="home_title">Contact us</div>
 					</div>
 				</div>
 			</div>
@@ -104,10 +84,7 @@
 				<div class="container2">
 					<div class="innerwrap">
 						<section class="section1 clearfix">
-							<div class="textcenter">
-								<span class="seperator"></span>
-								<h1>Drop Us a Mail</h1>
-							</div>
+							<h1>Drop Us a Mail</h1>
 						</section>
 						<section class="section2 clearfix">
 							<div class="col2 column1 first">

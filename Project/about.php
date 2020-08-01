@@ -14,29 +14,9 @@
 
 <body>
 	<div class="super_container">
-		<!-- Menu -->
-		<div class="menu trans_500">
-			<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
-				<div class="menu_close_container">
-					<div class="menu_close"></div>
-				</div>
-				<ul>
-					<li class="menu_item"><a href="index.php">Home</a></li>
-					<li class="menu_item"><a href="#">About us</a></li>
-					<li class="menu_item"><a href="contact.php">Contact</a></li>
-				</ul>
-			</div>
-			<div class="menu_social">
-				<ul>
-					<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-				</ul>
-			</div>
-		</div>
 		<!-- Home -->
 		<div class="home">
-			<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/contact.jpg" data-speed="0.8"></div>
+			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_1.jpg"></div>
 			<!-- Header -->
 			<header class="header" id="header">
 				<div>
@@ -47,12 +27,13 @@
 				<section class="navigation">
 					<div class="nav-container">
 						<div class="brand">
-							<a href="#">LOGO</a>
+							<a href="index.php">LOGO</a>
 						</div>
 						<nav>
-							<div class="nav-mobile">
-								<a id="nav-toggle" href="#!"><span></span></a>
+						<div class="nav-mobile">
+								<a id="nav-toggle" href="#"><span></span></a>
 							</div>
+							
 							<ul class="nav-list">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="about.php">About</a></li>
@@ -64,7 +45,7 @@
 										<li><a href="login/admin/index.php">Admin Login</a></li>
 									</ul>
 								</li>
-								<li><a href="#!">Sign-Up</a>
+								<li><a href="#">Sign-Up</a>
 									<ul class="nav-dropdown">
 										<li><a href="login/maintainence.php">As a Doctor</a></li>
 										<li><a href="Signup/patientsignup/signuppateint.php">As a Patient</a></li>
@@ -541,10 +522,10 @@
 		
 	</script>
 	<script src="js/jquery-3.3.1.min.js"></script>
+	<script src="js/custom.js"></script>
 	<script src="styles/bootstrap4/bootstrap.min.js"></script>
 	<script src="plugins/greensock/TweenMax.min.js"></script>
 	<script src="plugins/scrollmagic/ScrollMagic.min.js"></script>
 	<script src="plugins/parallax-js-master/parallax.min.js"></script>
-	<script src="js/custom.js"></script>
 </body>
 </html>

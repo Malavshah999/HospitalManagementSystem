@@ -4,11 +4,11 @@
 	<title>Health</title>
 
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
-	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="plugins/font-awesome-4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
 </head>
 <body>
@@ -16,7 +16,7 @@
 	<div class="super_container">
 		<!-- Home -->
 		<div class="home">
-			<div class="background_image" style="background-color:black;background-image:url(images/box_2.jpg)"></div>
+			<div class="background_image" style="background-image:url(images/box_2.jpg)"></div>
 			<!-- Header -->
 			<header class="header" id="header">
 				<div>
@@ -37,14 +37,14 @@
 								<li><a href="index.php">Home</a></li>
 								<li><a href="about.php">About</a></li>
 								<li><a href="contact.php">Contact</a></li>
-								<li><a href="#!">User Login</a>
+								<li><a href="#">User Login</a>
 									<ul class="nav-dropdown">
 										<li><a href="login/maintainence.php">Doctor's Login</a></li>
 										<li><a href="login/patientlogin.php">Patient's Login</a></li>
 										<li><a href="login/admin/index.php">Admin Login</a></li>
 									</ul>
 								</li>
-								<li><a href="#!">Sign-Up</a>
+								<li><a href="#">Sign-Up</a>
 									<ul class="nav-dropdown">
 										<li><a href="login/maintainence.php">As a Doctor</a></li>
 										<li><a href="Signup/patientsignup/signuppateint.php">As a Patient</a></li>
@@ -63,7 +63,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_content">
-						<div class="home_title">Medical Services that you can trust</div>
+						<div class="home_title">WELCOME TO LOGO !</div>
 						<div class="home_text">
 							<p><a href="Pateintregister/registerpatient.php" class="btn btn-primary py-3 px-4">New Patient's Register</a></p>
 						</div>
