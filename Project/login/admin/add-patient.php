@@ -23,22 +23,18 @@ echo "<script>window.location.href ='manage-patient.php'</script>";
 }
 }
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<title>Doctor | Add Patient</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
-		<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/select2/select2.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
@@ -60,10 +56,179 @@ error:function (){}
 </script>
 	</head>
 	<body>
-		<div id="app">		
-<?php include('include/sidebar.php');?>
-<div class="app-content">
-<?php include('include/header.php');?>
+		<div id="app">
+			<div class="sidebar app-aside" id="sidebar">
+				<div class="sidebar-container perfect-scrollbar">
+
+<nav><!-- start: MAIN NAVIGATION MENU -->
+<div class="navbar-title">
+<span>Main Navigation</span>
+</div>
+<ul class="main-navigation-menu">
+
+<li>
+<a href="dashboard.php">
+<div class="item-content">
+	<div class="item-media">
+	<i class="ti-home"></i></div>
+	<div class="item-inner">
+		<span class="title"> Dashboard </span>
+</div>
+</div>
+</a>
+</li>
+							<li>
+								<a href="javascript:void(0)">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-user"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title"> Doctors </span><i class="icon-arrow"></i>
+										</div>
+									</div>
+								</a>
+						
+								<ul class="sub-menu">
+									<li>
+										<a href="doctor-specilization.php">
+											<span class="title"> Doctor Specialization </span>
+										</a>
+									</li>
+						
+									<li>
+										<a href="add-doctor.php">
+											<span class="title"> Add Doctor</span>
+										</a>
+									</li>
+									<li>
+										<a href="Manage-doctors.php">
+											<span class="title"> Manage Doctors </span>
+										</a>
+									</li>
+									
+								</ul>
+								</li>
+
+						
+
+
+								<li>
+								<a href="javascript:void(0)">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-user"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title"> Patients </span><i class="icon-arrow"></i>
+										</div>
+									</div>
+								</a>
+								<ul class="sub-menu">
+									
+									<li>
+										<a href="add-patient.php">
+											<span class="title"> Add Patient</span>
+										</a>
+									</li>
+									<li>
+										<a href="manage-patient.php">
+											<span class="title"> Manage Patients </span>
+										</a>
+									</li>
+									
+								</ul>
+								</li>	
+
+
+
+
+
+								<li>
+								<a href="patient-search.php">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-search"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title"> Patient Search </span>
+										</div>
+									</div>
+								</a>
+							</li>
+								</li>
+
+						</ul>
+					</nav>
+					</div>
+			</div>
+
+
+<div class="app-content"><?php error_reporting(0);?>
+<header class="navbar navbar-default navbar-static-top">
+					<!-- start: NAVBAR HEADER -->
+					<div class="navbar-header">
+						<a href="#" class="sidebar-mobile-toggler pull-left hidden-md hidden-lg" class="btn btn-navbar sidebar-toggle" data-toggle-class="app-slide-off" data-toggle-target="#app" data-toggle-click-outside="#sidebar">
+							<i class="ti-align-justify"></i>
+						</a>
+						<a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
+							<i class="ti-align-justify"></i>
+						</a>
+						<a class="pull-right menu-toggler visible-xs-block" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+							<span class="sr-only">Toggle navigation</span>
+							<i class="ti-view-grid"></i>
+						</a>
+					</div>
+					<!-- end: NAVBAR HEADER -->
+
+
+
+
+
+					<!-- start: NAVBAR COLLAPSE -->
+					<div class="navbar-collapse collapse">
+						<ul class="nav navbar-right">
+							<!-- start: MESSAGES DROPDOWN -->
+								<li  style="padding-top:2% ">
+								<h2>Hospital Management System</h2>
+							</li>
+						
+						
+							<li class="dropdown current-user">
+								<a href class="dropdown-toggle" data-toggle="dropdown">
+									<img src="assets/images/system-administrator-png-system-administrator-logo-system-administrator-png-260_260.jpg" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
+								</a>
+
+								<ul class="dropdown-menu dropdown-dark">
+									<li>
+										<a href="change-password.php">Change Password</a>
+									</li>
+
+									<li>
+										<a href="logout.php">
+											Log Out
+										</a>
+									</li>
+								</ul>
+							</li>
+							<!-- end: USER OPTIONS DROPDOWN -->
+						</ul>
+
+
+
+
+						<!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+						<div class="close-handle visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+							<div class="arrow-left"></div>
+							<div class="arrow-right"></div>
+						</div>
+						<!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+					</div>
+				
+					
+					<!-- end: NAVBAR COLLAPSE -->
+				</header>
+
 						
 <div class="main-content" >
 <div class="wrap-content container" id="container">
@@ -73,6 +238,7 @@ error:function (){}
 <div class="col-sm-8">
 <h1 class="mainTitle">Patient | Add Patient</h1>
 </div>
+
 <ol class="breadcrumb">
 <li>
 <span>Patient</span>
@@ -82,7 +248,10 @@ error:function (){}
 </li>
 </ol>
 </div>
+
 </section>
+
+
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
@@ -92,9 +261,10 @@ error:function (){}
 <div class="panel-heading">
 <h5 class="panel-title">Add Patient</h5>
 </div>
+
+
 <div class="panel-body">
 <form role="form" name="" method="post">
-
 <div class="form-group">
 <label for="doctorname">
 Patient Name
@@ -102,63 +272,39 @@ Patient Name
 <input type="text" name="patname" class="form-control"  placeholder="Enter Patient Name" required="true">
 </div>
 <div class="form-group">
-<label for="fess">
- Patient Contact no
-</label>
+<label for="fess">Patient Contact no</label>
 <input type="text" name="patcontact" class="form-control"  placeholder="Enter Patient Contact no" required="true" maxlength="10" pattern="[0-9]+">
 </div>
 <div class="form-group">
-<label for="fess">
-Patient Email
-</label>
+<label for="fess">Patient Email</label>
 <input type="email" id="patemail" name="patemail" class="form-control"  placeholder="Enter Patient Email id" required="true" onBlur="userAvailability()">
 <span id="user-availability-status1" style="font-size:12px;"></span>
 </div>
 <div class="form-group">
-<label class="block">
-Gender
-</label>
+<label class="block">Gender</label>
 <div class="clip-radio radio-primary">
 <input type="radio" id="rg-female" name="gender" value="female" >
-<label for="rg-female">
-Female
-</label>
+<label for="rg-female">Female</label>
 <input type="radio" id="rg-male" name="gender" value="male">
-<label for="rg-male">
-Male
-</label>
+<label for="rg-male">Male</label>
 </div>
 </div>
 <div class="form-group">
-<label for="address">
-Patient Address
-</label>
+<label for="address">Patient Address</label>
 <textarea name="pataddress" class="form-control"  placeholder="Enter Patient Address" required="true"></textarea>
 </div>
 <div class="form-group">
-<label for="fess">
- Patient Age
-</label>
+<label for="fess">Patient Age</label>
 <input type="text" name="patage" class="form-control"  placeholder="Enter Patient Age" required="true">
 </div>
 <div class="form-group">
-<label for="fess">
- Medical History
-</label>
+<label for="fess">Medical History</label>
 <textarea type="text" name="medhis" class="form-control"  placeholder="Enter Patient Medical History(if any)" required="true"></textarea>
 </div>	
 
-<button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">
-Add
-</button>
+<button type="submit" name="submit" id="submit" class="btn btn-o btn-primary">Add</button>
 </form>
 </div>
-</div>
-</div>
-</div>
-</div>
-<div class="col-lg-12 col-md-12">
-<div class="panel panel-white">
 </div>
 </div>
 </div>
@@ -168,37 +314,40 @@ Add
 </div>
 </div>
 </div>
-			<!-- start: FOOTER -->
-<?php include('include/footer.php');?>
-			<!-- end: FOOTER -->
-		
-			<!-- start: SETTINGS -->
-<?php include('include/setting.php');?>
-			
-			<!-- end: SETTINGS -->
+
+
+<footer>
+
+<div class="footer-inner">
+<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>.
+ <span>All rights reserved</span>
+</div>
+
+			<div class="pull-right">
+			<span class="go-top"><i class="ti-angle-up"></i></span>
+			</div>
+			</div>
+</footer>
+
+					</div>
+	
+
+					<!-- end: THEME SWITCHER -->
+				</div>
+			</div>
 		</div>
 		<!-- start: MAIN JAVASCRIPTS -->
+
+
+
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="vendor/modernizr/modernizr.js"></script>
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
-		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-		<script src="vendor/switchery/switchery.min.js"></script>
-		<!-- end: MAIN JAVASCRIPTS -->
-		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-		<script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-		<script src="vendor/autosize/autosize.min.js"></script>
-		<script src="vendor/selectFx/classie.js"></script>
-		<script src="vendor/selectFx/selectFx.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
-		<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-		<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<!-- start: CLIP-TWO JAVASCRIPTS -->
+		
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
+
 		<script>
 			jQuery(document).ready(function() {
 				Main.init();
