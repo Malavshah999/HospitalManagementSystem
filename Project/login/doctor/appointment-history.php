@@ -21,7 +21,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 				<table data-vertable="ver4">
 					<thead>
 						<tr class="row100 head">
-							<th class="column100 column1" data-column="column1">doctor</th>
+							<th class="column100 column1" data-column="column1">patient</th>
 							<th class="column100 column2" data-column="column2">date </th>
 							<th class="column100 column3" data-column="column3">timeslot</th>	
 							<th class="column100 column4" data-column="column4">contact</th>
@@ -39,7 +39,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 							?>
 							<tbody>
 								<tr class="row100">
-									<td class="column100 column1" data-column="column1"><?php echo $rows["doctor"]; ?></td>
+									<td class="column100 column1" data-column="column1"><?php echo $rows["patient"]; ?></td>
 									<td class="column100 column2" data-column="column2"><?php echo $rows["date"]; ?></td>
 									<td class="column100 column3" data-column="column3"><?php echo $rows["timeslot"]; ?></td>
 									<td class="column100 column4" data-column="column4"><?php echo $rows["contact"]; ?></td>
@@ -60,7 +60,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 		<?php 
 	}
 	else{
-		echo "<script>location.href='patientlogin.php'</script>";
+		echo "<script>location.href='appointment-history2.php'</script>";
 	}
 	?>
 </body>

@@ -44,18 +44,19 @@
 								<li><a href="about.php">About</a></li>
 								<li><a href="contact.php">Contact</a></li>
 								<li><a href="#">User Login</a>
-									<ul class="nav-dropdown">
-										<li><a href="login/maintainence.php">Doctor's Login</a></li>
+										<ul class="nav-dropdown">
+										<li><a href="login/doctor/index.php">Doctor's Login</a></li>
 										<li><a href="login/patientlogin.php">Patient's Login</a></li>
 										<li><a href="login/admin/index.php">Admin Login</a></li>
 									</ul>
 								</li>
 								<li><a href="#">Sign-Up</a>
 									<ul class="nav-dropdown">
-										<li><a href="login/maintainence.php">As a Doctor</a></li>
+										<li><a href="Signup/doctorsignup/signupdoctor.php">As a Doctor</a></li>
 										<li><a href="Signup/patientsignup/signuppateint.php">As a Patient</a></li>
 									</ul>
-								</li>		
+								</li>
+							
 							</ul>
 						</nav>
 					</div>
