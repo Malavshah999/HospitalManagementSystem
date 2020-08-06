@@ -194,15 +194,7 @@ check_login();
 							<div class="row">
 								<div class="col-sm-8">
 									<h1 style="color: blue;" class="mainTitle">Dashboard</h1>
-																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Dashboard</span>
-									</li>
-								</ol>
+								
 							</div>
 						</section>
 			

@@ -212,15 +212,6 @@ check_login();
 </div>
 
 
-<ol class="breadcrumb">
-<li>
-<span>Admin</span>
-</li>
-<li class="active">
-<span>View Patients</span>
-</li>
-</ol>
-
 </div>
 </section>
 

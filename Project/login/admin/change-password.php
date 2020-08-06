@@ -264,15 +264,7 @@ return true;
 							</div>
 							
 
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Change Password</span>
-									</li>
-								</ol>
-						
+								
 							</div>
 						</section>
 						

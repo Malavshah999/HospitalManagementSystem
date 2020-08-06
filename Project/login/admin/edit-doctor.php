@@ -226,14 +226,7 @@ $msg="Doctor Details updated Successfully";
 								<div class="col-sm-8">
 									<h1 class="mainTitle">Admin | Edit Doctor Details</h1>
 																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Edit Doctor Details</span>
-									</li>
-								</ol>
+								
 							</div>
 						</section>
 						<!-- end: PAGE TITLE -->

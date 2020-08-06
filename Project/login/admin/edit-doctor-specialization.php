@@ -220,14 +220,7 @@ $_SESSION['msg']="Doctor Specialization updated successfully !!";
 																	</div>
 								
 
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Edit Doctor Specialization</span>
-									</li>
-								</ol>
+								
 
 
 							</div>

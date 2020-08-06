@@ -208,7 +208,7 @@ error:function (){}
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/system-administrator-png-system-administrator-logo-system-administrator-png-260_260.jpg" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
+									<img src="assets/images/system-administrator-png-system-administrator-logo-system-administrator-png-260_260.jpg"> <span class="username">Admin<i class="ti-angle-down"></i></i></span>
 								</a>
 								
 								<ul class="dropdown-menu dropdown-dark">

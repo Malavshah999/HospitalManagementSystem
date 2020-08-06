@@ -28,7 +28,7 @@ echo "<script>window.location.href ='manage-patient.php'</script>";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Doctor | Add Patient</title>
+		<title>Admin | Add Patient</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 
@@ -236,17 +236,9 @@ error:function (){}
 <section id="page-title">
 <div class="row">
 <div class="col-sm-8">
-<h1 class="mainTitle">Patient | Add Patient</h1>
+<h1 class="mainTitle">Admin | Add Patient</h1>
 </div>
 
-<ol class="breadcrumb">
-<li>
-<span>Patient</span>
-</li>
-<li class="active">
-<span>Add Patient</span>
-</li>
-</ol>
 </div>
 
 </section>

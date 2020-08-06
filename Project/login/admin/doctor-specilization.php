@@ -21,19 +21,20 @@ if(isset($_GET['del']))
 	<head>
 		<title>Admin | Doctor Specialization</title>
 	
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-			<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 	</head>
 	<body>
 		<div id="app">
 			<div class="sidebar app-aside" id="sidebar">
 				<div class="sidebar-container perfect-scrollbar">
-<nav>		<!-- start: MAIN NAVIGATION MENU -->
+					<nav>		
+						<!-- start: MAIN NAVIGATION MENU -->
 						<div class="navbar-title">
 							<span>Main Navigation</span>
 						</div>
@@ -144,7 +145,7 @@ if(isset($_GET['del']))
 
 			<div class="app-content">
 		<?php error_reporting(0);?>
-<header class="navbar navbar-default navbar-static-top">
+				<header class="navbar navbar-default navbar-static-top">
 					<!-- start: NAVBAR HEADER -->
 					<div class="navbar-header">
 						<a href="#" class="sidebar-mobile-toggler pull-left hidden-md hidden-lg" class="btn btn-navbar sidebar-toggle" data-toggle-class="app-slide-off" data-toggle-target="#app" data-toggle-click-outside="#sidebar">
@@ -212,14 +213,7 @@ if(isset($_GET['del']))
 								<div class="col-sm-8">
 									<h1 class="mainTitle">Admin | Add Doctor Specialization</h1>
 																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Add Doctor Specialization</span>
-									</li>
-								</ol>
+								
 							</div>
 						</section>
 						<!-- end: PAGE TITLE -->
