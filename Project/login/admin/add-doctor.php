@@ -257,15 +257,7 @@ error:function (){}
 								<div class="col-sm-8">
 									<h1 class="mainTitle">Admin | Add Doctor</h1>
 																	</div>
-								<ol class="breadcrumb">
-									<li>
-										<span>Admin</span>
-									</li>
-									<li class="active">
-										<span>Add Doctor</span>
-									</li>
-								</ol>
-							</div>
+								</div>
 						</section>
 
 
