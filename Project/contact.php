@@ -72,6 +72,8 @@
 			</div>
 		</div>
 	</div>
+<hr>
+
 	<div class="container-contact100">
 		<div class="wrap-contact100">
 			<form action="action.php" method="post" class="contact100-form validate-form">
@@ -167,7 +169,7 @@
 
 	  gtag('config', 'UA-23581568-13');
 	</script>
-
+<hr>
 
 <!-- Footer -->
 
