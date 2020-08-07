@@ -10,35 +10,32 @@
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
 	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
+	<link rel="stylesheet" type="text/css" href="styles/icon-font.min.css">
+<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+	<link rel="stylesheet" type="text/css" href="styles/main2.css">
 
 </head>
 
 <body>
-	<div class="super_container">
-		<!-- Home -->
-
+		<div class="super_container">
 		<div class="home">
-			<div class="parallax_background parallax-window"   data-image-src="images/box_3.jpg" data-parallax="scroll" >
-			</div>
-			
-			<!-- Header -->
-
+			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_1.jpg"></div>
 			<header class="header" id="header">
 				<div>
 					<div class="header_top">
-						<div class="container">
-						</div>
+						<div class="container"/>
 					</div>
 				</div>			
 				<section class="navigation">
 					<div class="nav-container">
 						<div class="brand">
-							<a href="index.php">LOGO</a>
+							<a href="index.php">HMS</a>
 						</div>
 						<nav>
-							<div class="nav-mobile">
-								<a id="nav-toggle" href="#!"><span></span></a>
+						<div class="nav-mobile">
+								<a id="nav-toggle" href="#"><span></span></a>
 							</div>
+							
 							<ul class="nav-list">
 								<li><a href="index.php">Home</a></li>
 								<li><a href="about.php">About</a></li>
@@ -56,7 +53,6 @@
 										<li><a href="Signup/patientsignup/signuppateint.php">As a Patient</a></li>
 									</ul>
 								</li>
-							
 							</ul>
 						</nav>
 					</div>
@@ -76,96 +72,117 @@
 			</div>
 		</div>
 	</div>
-	
-	<!-- Contact -->
+	<div class="container-contact100">
+		<div class="wrap-contact100">
+			<form action="action.php" method="post" class="contact100-form validate-form">
+				<span class="contact100-form-title">Send Us A Message</span>
+				<label class="label-input100" for="name">Tell us your name *</label>
 
-	<div class="contact">
-		<div class="container">
-			<div class="row">
-				<div class="container2">
-					<div class="innerwrap">
-						<section class="section1 clearfix">
-							<h1>Drop Us a Mail</h1>
-						</section>
-						<section class="section2 clearfix">
-							<div class="col2 column1 first">
-								<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
-								<div class="sec2map" style='overflow:hidden;height:550px;width:100%;'>
-									<div id='gmap_canvas' style='height:100%;width:100%;'></div>
-									<div>
-										<small><a href="http://embedgooglemaps.com">embed google maps </a></small>
-									</div>
-									<div>
-										<small><a href="http://freedirectorysubmissionsites.com/">free web directories</a></small>
-									</div>
-									<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
-								</div>
-								<script type='text/javascript'>
-									function init_map(){
-										var myOptions = {zoom:14,center:new google.maps.LatLng(19.075314480255834,72.88153973865361),mapTypeId: google.maps.MapTypeId.ROADMAP};
-										map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
-										marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(19.075314480255834,72.88153973865361)});
-										infowindow = new google.maps.InfoWindow({content:'<strong>My Location</strong><br>mumbai<br>'});
-										google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);
-									}
-									google.maps.event.addDomListener(window, 'load', init_map);
-								</script>
-							</div>
-							<div class="col2 column2 last">
-								<div class="sec2innercont">
-									<div class="sec2addr">
-										<p>SMT. P.D.HINDUJA TRUST'S, INSTITUTE OF MANAGEMENT STUDIES (31236)</p>
-										<p><span class="collig">Phone :</span> +91 8145220128</p>
-										<p><span class="collig">Email :</span>akramulali8067@gmail.com</p>
-										<p><span class="collig">Fax :</span> +91 7045053487</p>
-									</div>
-								</div>
-								<div class="sec2contactform">
-          <h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
-          <form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this)" target="_top">
-									<input name="skip_WhereToSend" type="hidden" value="akramulali8067@gmail.com" />
-									<input name="skip_SnapHostID" type="hidden" value="9FCFDTWMBCRB" />
-									<input name="skip_WhereToReturn" type="hidden" value="http://localhost/ProjectLatestNew/project/index.php"/>
-									<input name="skip_Subject" type="hidden" value="Contact Us Form" />
-									<input name="skip_ShowUsersIp" type="hidden" value="1" />
-									<div class="clearfix">
-									<input type="text" class="col2 first" name="FirstName" placeholder="Your First Name">
-						         <input type="text" class="col2 last" name="LastName" placeholder="Your Last Name">
-										</div>
-										<div class="clearfix">
-											<input type="email" class="col2 first" name="EmailAddress" placeholder="Your E-mail">
-											<input type="text" class="col2 last" name="Contact" placeholder="Your Contact Number">
-										</div>
-										<div class="clearfix">
-											<textarea name="message" class="col2 first" id="message" cols="30" rows="10" placeholder="Message"></textarea>
-										</div>
-										<div class="clearfix"><input type="submit" value="Send"></div>
+				<div class="wrap-input100 validate-input" data-validate = "Type full name">
+					<input id="name" class="input100" type="text" name="name" placeholder=" Please Full name!">
+					<span class="focus-input100"></span>
+				</div>
 
-									</form>
-								</div>
+				<label class="label-input100" for="email">Enter your email *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+		          <span class="focus-input100"></span>
+				</div>
 
-							</div>
-						</section>
+				<label class="label-input100" for="phone">Enter phone number</label>
+				<div class="wrap-input100">
+					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+					<span class="focus-input100"></span>
+				</div>
+				
+
+
+
+
+				<label class="label-input100" for="message">Message *</label>
+				<div class="wrap-input100 validate-input" data-validate = "Message is required">
+					<textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+
+				<div class="container-contact100-form-btn">
+			<input type="submit" value="Send Message" class="contact100-form-btn">
+				</div>
+			</form>
+
+			<div class="contact100-more flex-col-c-m" style="background-image: url('images/bg-01.jpg');">
+				<div class="flex-w size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-map-marker"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">Address</span>
+
+						<span class="txt2">New Charni Road,Hinduja Lane,400004</span>
+					
+					</div>
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-phone-handset"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">Lets Talk</span>
+						<span class="txt3">7045053487</span>
+					</div>
+
+				</div>
+
+				<div class="dis-flex size1 p-b-47">
+					<div class="txt1 p-r-25">
+						<span class="lnr lnr-envelope"></span>
+					</div>
+
+					<div class="flex-col size2">
+						<span class="txt1 p-b-20">General Suppor</span>
+						<span class="txt3">akramulali8067@gmail.com
+						</span>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<!-- Footer -->
+	<div id="dropDownSelect1"></div>
+
+	<script>
+		$(".selection-2").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'UA-23581568-13');
+	</script>
+
+
+<!-- Footer -->
 
 	<footer class="footer">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div>
 		<div class="footer_content">
 			<div class="container">
 				<div class="row">
-					<!-- Footer About -->
+					<!-- About -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
-							<div class="logo">
-								<a href="#">Coming soon <span>+</span></a>	
+							<div class="HMS">
+								<a href="#">HMS</a>	
 							</div>
-							<div class="footer_about_text">coming soon</div>
+							<div class="footer_about_text">HOSPITAL MANAGEMENT SYSTEM</div>
 							<div class="footer_social">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
 									<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -174,14 +191,11 @@
 								</ul>
 							</div>
 							<div class="copyright">
-								Copyright &copy;
-								<script>document.write(new Date().getFullYear());
-								</script> 
+								Copyright &copy; 2020
 								All rights reserved | This project is made by Akramul and Malav</a>
 							</div>
 						</div>
 					</div>
-					
 					<!-- Footer Contact -->
 					<div class="col-lg-5 footer_col">
 						<div class="footer_contact">
