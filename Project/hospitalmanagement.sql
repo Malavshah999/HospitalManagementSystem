@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 05, 2020 at 04:02 PM
+-- Generation Time: Aug 07, 2020 at 06:36 AM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `admin` (
   `id` int(11) NOT NULL,
-  `username` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `updationDate` varchar(255) NOT NULL
+  `username` varchar(30) NOT NULL,
+  `password` varchar(30) NOT NULL,
+  `updationDate` varchar(25) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -51,13 +51,13 @@ INSERT INTO `admin` (`id`, `username`, `password`, `updationDate`) VALUES
 CREATE TABLE `appointment` (
   `id` int(20) NOT NULL,
   `patient` varchar(25) NOT NULL,
-  `doctor` varchar(30) NOT NULL,
+  `doctor` varchar(25) NOT NULL,
   `date` date NOT NULL,
-  `timeslot` varchar(30) NOT NULL,
+  `timeslot` varchar(25) NOT NULL,
   `fees` int(10) NOT NULL,
   `contact` varchar(15) NOT NULL,
-  `address` varchar(70) NOT NULL,
-  `disease` varchar(70) NOT NULL
+  `address` varchar(50) NOT NULL,
+  `disease` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -65,14 +65,13 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `patient`, `doctor`, `date`, `timeslot`, `fees`, `contact`, `address`, `disease`) VALUES
-(1, 'akramulali9723@gmail.com', 'Dr. Anjila Aneja', '2020-06-05', '11:00-12:00 a.m.', 1000, '8145220128', 'hii', 'hii'),
-(5, 'akramulali8067@gmail.com', 'Dr. Monaksh Shah', '2020-07-30', '10:00-11:00 a.m.', 10000, '8145220128', 'mumbai', 'no'),
-(6, 'akramulali8067@gmail.com', 'Dr. Monaksh Shah', '2020-08-03', '9:00-10:00 a.m.', 10000, '8145220128', 'mumbai', 'no'),
-(7, 'akjjjjj33@gmail.com', 'Mrs.Nina Patel', '2020-08-08', '10:00-11:00 a.m.', 10000, '8145220128', 'mumbai', 'no'),
-(8, 'technicalakramul7986@gmai', 'Dr. Monaksh Shah', '2020-08-19', '10:00-11:00 a.m.', 10000, '8145220128', 'mi', 'no'),
-(9, 'akramulali89@gmail.com', 'Dr. Monaksh Shah', '2020-08-04', '10:00-11:00 a.m.', 10000, '8145220128', 'hi', 'i'),
-(10, 'akramulali8067@gmail.com', 'Mrs. Nina Patel', '2020-08-06', '10:00-11:00 a.m.', 100, '8145220128', 'hi', 'no'),
-(11, 'akramulali8067@gmail.com', 'Dr. Anjila Aneja', '2020-08-06', '10:00-11:00 a.m.', 100, '8145220128', 'hi', 'no');
+(15, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-08-13', '9:00-10:00 a.m.', 1000, '8145220128', 'mumbai', 'no'),
+(16, 'akramulali80679@gmail.com', 'akram', '2020-08-13', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(17, 'akramulali80679@gmail.com', 'akram', '2020-08-04', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(18, 'akramulali80679@gmail.com', 'Swaroop Gopal', '2020-08-04', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(19, 'akramulali80679@gmail.com', 'Swaroop Gopal', '2020-08-11', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(20, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-08-19', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(21, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-07-30', '11:00-12:00 a.m.', 100, '8145220128', 'mumbai', 'no');
 
 -- --------------------------------------------------------
 
@@ -83,11 +82,11 @@ INSERT INTO `appointment` (`id`, `patient`, `doctor`, `date`, `timeslot`, `fees`
 CREATE TABLE `doctors` (
   `id` int(10) NOT NULL,
   `specilization` varchar(20) DEFAULT NULL,
-  `doctorName` varchar(25) DEFAULT NULL,
+  `doctorName` varchar(20) DEFAULT NULL,
   `address` longtext DEFAULT NULL,
   `docFees` varchar(20) DEFAULT NULL,
   `contactno` bigint(11) DEFAULT NULL,
-  `docEmail` varchar(30) DEFAULT NULL,
+  `docEmail` varchar(25) DEFAULT NULL,
   `password` varchar(50) DEFAULT NULL,
   `creationDate` timestamp NULL DEFAULT current_timestamp(),
   `updationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
@@ -98,20 +97,10 @@ CREATE TABLE `doctors` (
 --
 
 INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`, `contactno`, `docEmail`, `password`, `creationDate`, `updationDate`) VALUES
-(1, 'Cardiologist', 'Dr. Monaksh Shah', 'hii', '10000', 8145220125, 'akjjjjj@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-24 10:15:46', NULL),
-(2, 'Cardiologist', 'akram', 'mumbai', '10000', 8145220125, 'akramul@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-24 10:21:38', NULL),
-(3, 'Cardiologist', 'Dr. Monaksh Shah', 'MUMBAI', '10000', 8145220125, 'akramul6@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-25 10:50:40', NULL),
-(4, 'DENTAL', 'akramul', 'mumbai', '10000', 8145220128, 'akramul67@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-25 14:02:19', NULL),
-(5, 'DENTAL', 'akram', 'mumbai', '10000', 8145220125, 'akramul69@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-25 14:16:07', NULL),
-(6, 'DENTAList', 'akramul', 'mumbai', '10000', 8145220125, 'akramul690@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-06-26 02:59:32', NULL),
-(7, 'DENTAList', 'Dr. Monaksh Shah', 'mumbai', '10000', 8145220125, 'akjjjjj0@gmail.com', '42b02d1377ca4ffced107a584ee06a35', '2020-07-31 09:35:04', NULL),
-(8, 'DENTAL', 'akramul', 'mumbai', '10000', 8145220125, 'akramul96@gmail.com', '42b02d1377ca4ffced107a584ee06a35', '2020-07-31 09:48:58', NULL),
-(9, 'DENTAL', 'akram', 'hi', '10000', 8145220125, 'akjjjjwj@gmail.com', '03793ef7d06ffd63d34ade9d091f1ced', '2020-07-31 15:23:17', NULL),
-(10, 'DENTAList', 'akram', 'hi', '10000', 8145220128, 'akjjjjqj@gmail.com', '03793ef7d06ffd63d34ade9d091f1ced', '2020-08-01 14:53:49', NULL),
-(11, 'Cardiologist', 'akram', 'hi', '10000', 5625622453, 'akjjjsjj@gmail.com', '03793ef7d06ffd63d34ade9d091f1ced', '2020-08-01 15:02:55', NULL),
-(12, 'DENTAList', 'akram', 'hi', '10000', 8145220120, 'akramul7@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-03 03:48:21', '0000-00-00 00:00:00'),
-(13, 'DENTAList', 'Mrs. Nina Patel', 'mumbai', '10000', 5625622455, 'akjjjjj33@gmail.com', '42b02d1377ca4ffced107a584ee06a35', '2020-08-03 14:52:00', '2020-08-05 10:12:39'),
-(14, 'DENTAL', 'akram', 'hi', '10000', 8145220128, 'akramulali89@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-05 11:17:30', NULL);
+(21, 'Cardiologist', 'Dr. Monaksh Shah', 'mumbai', '1000', 8145220125, 'akramul690@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:04:03', NULL),
+(22, 'Neurology', 'akram', 'mumbai', '1000', 7045053487, 'akramul69@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:08:08', NULL),
+(23, 'Neurology', 'Dr. Amit Shrivastava', 'mumbai', '2000', 8145220120, 'akramul6709@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:15:16', NULL),
+(24, 'Gastroenterology', 'Swaroop Gopal', 'mumbai', '3000', 8145220129, 'akramul68@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:16:13', NULL);
 
 -- --------------------------------------------------------
 
@@ -131,11 +120,15 @@ CREATE TABLE `doctorsignup` (
 --
 
 INSERT INTO `doctorsignup` (`fullname`, `phonenumber`, `email`, `password`) VALUES
-('Sk Akramul', '7045053487', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220128', 'akramulali97234@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220128', 'technicalakramul70@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('Akram', '8145220129', 'technicalakramul7777@gmail.com', '25d55ad283aa400af464c76d713c07ad');
+('Sk Akramul', '7045053487', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d7'),
+('Sk Akramul Ali', '8145220128', 'akramulali97234@gmail.com', '25d55ad283aa400af464c76d7'),
+('Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '25d55ad283aa400af464c76d7'),
+('Sk Akramul Ali', '8145220128', 'technicalakramul70@gmail.com', '42b02d1377ca4ffced107a584'),
+('Akram', '8145220129', 'technicalakramul7777@gmail.com', '25d55ad283aa400af464c76d7'),
+('Sk Akramul Ali', '8145220128', 'technicalakramul997@gmail.com', '42b02d1377ca4ffced107a584'),
+('Sk Akramul', '7045053487', 'technicalakramul790@gmail.com', '25d55ad283aa400af464c76d7'),
+('Sk Akramul Ali', '7045053487', 'technicalakramul789@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+('Sk Akramul Ali', '8452255622', 'technicalakramul786@gmail.com', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
@@ -155,13 +148,36 @@ CREATE TABLE `doctorspecilization` (
 --
 
 INSERT INTO `doctorspecilization` (`id`, `specilization`, `creationDate`, `updationDate`) VALUES
-(16, 'Cardiologist', '2020-06-25 10:49:35', '2020-06-25 10:49:35'),
-(17, 'DENTAL', '2020-06-25 11:03:34', '2020-06-25 11:03:34'),
-(18, 'DENTAList', '2020-06-25 14:01:40', '2020-06-25 14:01:40'),
-(19, 'DENTAList', '2020-06-26 02:58:51', '2020-06-26 02:58:51'),
-(20, 'Cardiologist', '2020-07-31 16:02:06', '2020-07-31 16:02:06'),
-(21, 'DENTAL', '2020-08-01 14:53:27', '2020-08-01 14:53:27'),
-(22, 'Cardiologist', '2020-08-01 15:02:35', '2020-08-01 15:02:35');
+(1, 'Cardiologist', '2020-08-07 03:28:57', '2020-08-07 03:28:57'),
+(2, 'Neurology', '2020-08-07 03:29:23', '2020-08-07 03:29:23'),
+(3, 'Gastroenterology', '2020-08-07 03:29:38', '2020-08-07 03:29:38'),
+(4, 'Cardiology', '2020-08-07 03:29:47', '2020-08-07 03:29:47'),
+(5, 'Gynaecologist', '2020-08-07 03:29:59', '2020-08-07 03:29:59'),
+(6, 'Surgery', '2020-08-07 03:30:06', '2020-08-07 03:30:06'),
+(7, 'Neurology', '2020-08-07 03:30:14', '2020-08-07 03:30:14');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `emergency`
+--
+
+CREATE TABLE `emergency` (
+  `id` int(11) NOT NULL,
+  `name` varchar(30) NOT NULL,
+  `gender` enum('male','female','others','') NOT NULL,
+  `birthday` date NOT NULL,
+  `Contact` int(11) NOT NULL,
+  `Postal` int(11) NOT NULL,
+  `textarea` int(40) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `emergency`
+--
+
+INSERT INTO `emergency` (`id`, `name`, `gender`, `birthday`, `Contact`, `Postal`, `textarea`) VALUES
+(2, 'Malav Shah', 'male', '2016-01-01', 222, 11, 11);
 
 -- --------------------------------------------------------
 
@@ -170,8 +186,8 @@ INSERT INTO `doctorspecilization` (`id`, `specilization`, `creationDate`, `updat
 --
 
 CREATE TABLE `patient` (
-  `name` varchar(50) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `name` varchar(25) NOT NULL,
+  `email` varchar(30) NOT NULL,
   `gender` enum('male','female','others') NOT NULL,
   `birthday` date NOT NULL,
   `Height` varchar(10) NOT NULL,
@@ -219,20 +235,21 @@ CREATE TABLE `patientsignup` (
 --
 
 INSERT INTO `patientsignup` (`fullname`, `phonenumber`, `email`, `password`) VALUES
-('Sk Akramul Ali', '7045053487', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul', '8145220128', 'akramulali8067@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-(' Akramul ali', '4562555582', 'akramulali97234@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('akrama ali', '8452255622', 'akramulali9723@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('Sk Akramul Ali', '8452255622', 'akramul@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('Sk Akramul', '8452255622', 'akramul9999@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('akram', '8452255622', 'akramulqqq1@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('akram', '5425265254', 'akakramul@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('babu', '8145220128', 'akramul9@gmail.com', '42b02d1377ca4ffced107a584ee06a35'),
-('Akram ali sk babu', '8145220128', 'technicalakramul79@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('akrama ali sk', '8145220120', 'technicalakramul7986@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220128', 'technicalakramul007@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-('Sk Akramul Ali', '8145220120', 'akramulali89@gmail.com', '25d55ad283aa400af464c76d713c07ad');
+('Sk Akramul Ali', '7045053487', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('Sk Akramul', '8145220128', 'akramulali8067@gmail.com', '25d55ad283aa400af464c76d713c07'),
+(' Akramul ali', '4562555582', 'akramulali97234@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('akrama ali', '8452255622', 'akramulali9723@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('Sk Akramul Ali', '8452255622', 'akramul@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('Sk Akramul', '8452255622', 'akramul9999@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('akram', '8452255622', 'akramulqqq1@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('akram', '5425265254', 'akakramul@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('babu', '8145220128', 'akramul9@gmail.com', '42b02d1377ca4ffced107a584ee06a'),
+('Akram ali sk babu', '8145220128', 'technicalakramul79@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('akrama ali sk', '8145220120', 'technicalakramul7986@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('Sk Akramul Ali', '8145220128', 'technicalakramul007@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('Sk Akramul Ali', '8145220120', 'akramulali89@gmail.com', '25d55ad283aa400af464c76d713c07'),
+('Sk Akramul Ali', '7045053487', 'akramulali80679@gmail.com', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
@@ -243,7 +260,7 @@ INSERT INTO `patientsignup` (`fullname`, `phonenumber`, `email`, `password`) VAL
 CREATE TABLE `quickcontact` (
   `name` varchar(20) NOT NULL,
   `email` varchar(30) NOT NULL,
-  `textarea` varchar(200) NOT NULL
+  `textarea` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -285,24 +302,10 @@ CREATE TABLE `tblpatient` (
 --
 
 INSERT INTO `tblpatient` (`ID`, `Docid`, `PatientName`, `PatientContno`, `PatientEmail`, `PatientGender`, `PatientAdd`, `PatientAge`, `PatientMedhis`, `CreationDate`) VALUES
-(1, 1, 'akramul', 8145220128, 'akramulali8@gmail.com', 'male', 'hii', 21, 'nothing', '2020-06-24 10:17:55'),
-(2, 1, 'akramul', 8145220128, 'akramulali8@gmail.com', 'male', 'hi', 21, 'nothing', '2020-06-24 10:20:33'),
-(3, 1, 'akramul', 8145220128, 'akramulali8@gmail.com', 'male', 'MUMBAI', 21, 'NOTHING', '2020-06-25 10:51:26'),
-(4, 1, 'akramul ali', 8145220128, 'akramulali88@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-06-25 14:03:15'),
-(5, 1, 'akramul ali sk', 8145220128, 'akramulali8@gmail.com', 'male', 'mumbai', 21, 'mumbai', '2020-06-25 14:10:57'),
-(6, 1, 'sk akramul ali', 8145220128, 'akramulali8@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-06-25 14:17:01'),
-(7, 1, 'akramul ali', 8145220128, 'akramulali88@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-06-26 03:00:02'),
-(8, 1, 'akramul ali', 8145220128, 'akramulali8@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-06-26 03:02:30'),
-(9, 1, 'akramul`', 7045053487, 'akramulali8@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-06-26 03:05:44'),
-(10, 1, 'akramul ali', 8145220128, 'akramula9li@gmail.com', 'male', 'muvai', 21, 'nthin', '2020-07-31 15:02:09'),
-(11, 1, 'akramul ali sk', 8145220128, 'akramulali888@gmail.com', 'male', 'h', 21, 'h', '2020-07-31 15:04:28'),
-(12, 1, 'akramul', 8145220128, 'akramulali1@gmail.com', 'male', 'i', 21, 'i', '2020-07-31 15:07:10'),
-(13, 1, 'akramul', 8145220128, 'akramulal7i1@gmail.com', 'male', 'hi', 21, 'hi', '2020-07-31 15:23:45'),
-(14, 1, 'akramul', 8145220188, 'akramulali9@gmail.com', 'male', 'hi', 21, 'hi', '2020-08-01 14:54:22'),
-(15, 1, 'akramulali', 8145220122, 'akramdula9li@gmail.com', 'male', 'hi', 22, 'hi', '2020-08-01 15:03:43'),
-(16, 12, 'akramul', 8145220128, 'akramula9i@gmail.com', 'male', 'hi\r\n', 21, 'hi', '2020-08-03 03:54:32'),
-(17, 13, 'akramul', 8145220128, 'akramulali8889@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-03 15:00:30'),
-(18, 14, 'akramul', 8145220128, 'akramulali@gmail.com', 'male', 'hi', 21, 'hi', '2020-08-05 13:59:23');
+(19, 1, 'Sk Akramul Ali', 8145220128, 'akramulali888@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:34:33'),
+(20, 1, 'Akramul', 7045053487, 'akramulali8067@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:07'),
+(21, 1, 'Akramul Ali', 8145220129, 'akramulali19@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:46'),
+(22, 1, 'Akramul Ali', 8145220129, 'akramulali19@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:46');
 
 --
 -- Indexes for dumped tables
@@ -333,6 +336,12 @@ ALTER TABLE `doctorspecilization`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `emergency`
+--
+ALTER TABLE `emergency`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tblpatient`
 --
 ALTER TABLE `tblpatient`
@@ -352,25 +361,31 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `doctorspecilization`
 --
 ALTER TABLE `doctorspecilization`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+
+--
+-- AUTO_INCREMENT for table `emergency`
+--
+ALTER TABLE `emergency`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `tblpatient`
 --
 ALTER TABLE `tblpatient`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

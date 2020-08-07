@@ -27,7 +27,7 @@
 				<section class="navigation">
 					<div class="nav-container">
 						<div class="brand">
-							<a href="index.php">LOGO</a>
+							<a href="index.php">HMS</a>
 						</div>
 						<nav>
 						<div class="nav-mobile">
@@ -113,6 +113,7 @@
 							<div class="milestone_text">Days a year</div>
 						</div>
 					</div>
+
 				</div>
 
 				<!-- Milestone -->
@@ -309,7 +310,7 @@
 	<div class="text-center section_title">Patients Reviews</div>
 	<br>
 	<div class=" row container">
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient4.jpg" alt="">
 			<h3>Mokshi Sharma</h3>
 			5.0
@@ -321,7 +322,7 @@
 			<p class="reviews">An excellent Doctor with so much of positive energy... 
 			We are blessed to have such a wonderful Doc to deliver our baby boy "Ethan" by her caring hands. I recommend Dr. Aneja !</p>
 		</div>
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient1.png" alt="">
 			<h3>Sharman Gupta</h3>
 			5.0
@@ -333,7 +334,7 @@
 			<p class="reviews">Dr. Amit and everyone associated with his practice are very knowledgable, friendly and helpful.
 			I have received nothing but great care and respect from their team.</p>
 		</div>
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient2.png" alt="">
 			<h3>Ganesh Chakraborty </h3>
 			5.0
@@ -346,7 +347,7 @@
 			a family member during all my meetings with him, before sessions, and after. The treatment was undoubtedly successful, 
 			and the results were as described.</p>
 		</div>
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient6.jpg" alt="">
 			<h3>Divya Joshi</h3>
 			4.0
@@ -359,7 +360,7 @@
 			and prescribes always with the right medications. I am very satisfied with the doctor issue Treatment. 
 			He is like a family doctor . Thank you Dr. Monaksh !</p>
 		</div>
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient3.png" alt="">
 			<h3>Mukesh Tripathi</h3>
 			4.0
@@ -371,7 +372,7 @@
 			<p class="reviews">Very polite and friendly doctor. Explain everything in detail and will answer all question in favourable
 			language. 101% I recommend Dr Shrivastava for a genuine opinion.</p>
 		</div>
-		<div class="col-md-6 review">
+		<div class="col-md-4 review">
 			<img src="images/patient5.jpg" alt="">
 			<h3>Raj Panchal</h3>
 			4.0
@@ -395,10 +396,10 @@
 					<!--About -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
-							<div class="logo">
-								<a href="#">Coming soon<span>+</span></a>	
+							<div class="HMS">
+								<a href="#">HMS</a>	
 							</div>
-							<div class="footer_about_text">coming soon </div>
+							<div class="footer_about_text">HOSPITAL MANAGEMENT SYSTEM</div>
 							<div class="footer_social">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
 									<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -456,26 +457,6 @@
 				</div>
 			</div>
 		</div>
-		<div class="footer_bar">
-			<div class="container">
-				<div class="row">
-					<div class="col">
-						<div class="footer_bar_content d-flex flex-sm-row flex-column align-items-lg-center align-items-start justify-content-start">
-							<div class="footer_links">
-								<ul class="d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-start">
-									<li><a href="#">Help Desk</a></li>
-									<li><a href="#">Emergency Services</a></li>
-									<li><a href="#">Appointment</a></li>
-								</ul>
-							</div>
-							<div class="footer_phone ml-lg-auto">
-								<i class="fa fa-phone" aria-hidden="true"></i>
-								<span>+91 8145220128</span>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
 		</div>
 	</footer>
 	<script>

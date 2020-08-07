@@ -31,6 +31,8 @@ session_start();
 					<div class="col-75">
 						<input list="Doctor" name="doctor" placeholder="Select your Doctor " required>
 						<datalist id="Doctor">
+
+						    <option>Swaroop Gopal</option>
 							<option>Dr. Monaksh Shah</option>
 							<option>Dr. Anjila Aneja</option>
 							<option>Mr. Swaroop Gopal</option>

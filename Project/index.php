@@ -27,7 +27,7 @@
 				<section class="navigation">
 					<div class="nav-container">
 						<div class="brand">
-							<a href="index.php">LOGO</a>
+							<a href="index.php">HMS</a>
 						</div>
 						<nav>
 							<div class="nav-mobile">
@@ -63,7 +63,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="home_content">
-						<div class="home_title">WELCOME TO LOGO !</div>
+						<div class="home_title">WELCOME TO HMS!</div>
 						<div class="home_text">
 							<p><a href="Pateintregister/registerpatient.php" class="btn btn-primary py-3 px-4">New Patient's Register</a></p>
 						</div>
@@ -267,10 +267,10 @@
 					<!-- About -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
-							<div class="logo">
-								<a href="#">Coming soon<span>+</span></a>	
+							<div class="HMS">
+								<a href="#">HMS</a>	
 							</div>
-							<div class="footer_about_text">coming soon </div>
+							<div class="footer_about_text">HOSPITAL MANAGEMENT SYSTEM</div>
 							<div class="footer_social">
 								<ul class="d-flex flex-row align-items-center justify-content-start">
 									<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>

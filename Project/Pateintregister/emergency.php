@@ -59,7 +59,7 @@
 					<p>Agreed to terms and conditions</p>
 				</div> 
 				<div class="inputfield">
-					<input type="button" value="Register" class="btn">
+					<input type="submit" value="Register" class="btn">
 				</div>
 			</form>	
 		</div>

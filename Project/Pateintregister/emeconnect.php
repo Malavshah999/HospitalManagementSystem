@@ -15,7 +15,7 @@ if($conn->connect_error)
 }
 else
 {
-	$stmt=$conn->prepare("insert into emergency (name,gender,birthday,Contact,Postal,textarea)
+	$stmt=$conn->prepare("insert into emergency(name,gender,birthday,Contact,Postal,textarea)
 	values(?,?,?,?,?,?)");
 	$stmt->bind_param("ssssss",$name,$gender,$birthday,$Contact,$Postal,$textarea);
 	$stmt->execute();

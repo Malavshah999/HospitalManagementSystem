@@ -121,16 +121,16 @@
 									</div>
 								</div>
 								<div class="sec2contactform">
-									<h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
-									<form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this)" target="_top">
-										<input name="skip_WhereToSend" type="hidden" value="akramulali8067@gmail.com" />
-										<input name="skip_SnapHostID" type="hidden" value="9FCFDTWMBCRB" />
-										<input name="skip_WhereToReturn" type="hidden" value="http://localhost/ProjectLatestNew/project/index.php"/>
-										<input name="skip_Subject" type="hidden" value="Contact Us Form" />
-										<input name="skip_ShowUsersIp" type="hidden" value="1" />
-										<div class="clearfix">
-											<input type="text" class="col2 first" name="FirstName" placeholder="Your First Name">
-											<input type="text" class="col2 last" name="LastName" placeholder="Your Last Name">
+          <h3 class="sec2frmtitle">Want to Know More?? Drop Us a Mail</h3>
+          <form action="http://www.SnapHost.com/captcha/send.aspx" id="ContactUsCaptchaWebForm" method="post" onsubmit="return ValidateForm(this)" target="_top">
+									<input name="skip_WhereToSend" type="hidden" value="akramulali8067@gmail.com" />
+									<input name="skip_SnapHostID" type="hidden" value="9FCFDTWMBCRB" />
+									<input name="skip_WhereToReturn" type="hidden" value="http://localhost/ProjectLatestNew/project/index.php"/>
+									<input name="skip_Subject" type="hidden" value="Contact Us Form" />
+									<input name="skip_ShowUsersIp" type="hidden" value="1" />
+									<div class="clearfix">
+									<input type="text" class="col2 first" name="FirstName" placeholder="Your First Name">
+						         <input type="text" class="col2 last" name="LastName" placeholder="Your Last Name">
 										</div>
 										<div class="clearfix">
 											<input type="email" class="col2 first" name="EmailAddress" placeholder="Your E-mail">
