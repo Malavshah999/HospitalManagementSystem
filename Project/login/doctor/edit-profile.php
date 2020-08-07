@@ -22,22 +22,15 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Doctr | Edit Doctor Details</title>
+		<title>Doctor | Edit Doctor Details</title>
 		
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
-		<link href="vendor/animate.css/animate.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/perfect-scrollbar/perfect-scrollbar.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/switchery/switchery.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/select2/select2.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-datepicker/bootstrap-datepicker3.standalone.min.css" rel="stylesheet" media="screen">
-		<link href="vendor/bootstrap-timepicker/bootstrap-timepicker.min.css" rel="stylesheet" media="screen">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 
 
 	</head>
@@ -213,17 +206,7 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
 								<div class="col-sm-8">
 					<h1 class="mainTitle">Doctor | Edit Doctor Details</h1></div>
 								
-								<ol class="breadcrumb">
-								
-									<li>
-										<span>Doctor</span>
-									</li>
-								
-									<li class="active">
-										<span>Edit Doctor Details</span>
-									</li>
-								
-								</ol>
+							
 							</div>
 						</section>
 
@@ -246,7 +229,7 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
                               <h4><?php echo htmlentities($data['doctorName']);?>'s Profile</h4>
                               <p><b>Profile Reg. Date: </b><?php echo htmlentities($data['creationDate']);?></p>
                               <?php if($data['updationDate']){?>
-                              <p><b>Profile Last Updation Date: </b><?php echo htmlentities($data['updationDate']);?></p>
+                              <p><b>Profile Last Updated On : </b><?php echo htmlentities($data['updationDate']);?></p>
                               <?php } 
                               ?>
                               <hr />
@@ -296,7 +279,7 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
 														</div>
 
 <div class="form-group">
-									<label for="fess">Doctor Email</label>
+									<label for="fess">Doctor Email-Address</label>
 
 <input type="email" name="docemail" class="form-control"  readonly="readonly"  value="<?php echo htmlentities($data['docEmail']);?>">
 														</div>
@@ -318,20 +301,7 @@ echo "<script>alert('Doctor Details updated Successfully');</script>";
 					</div>
 				</div>
 			</div>
-
-			<footer>
-				<div class="footer-inner">
-			
-					<div class="pull-left">
-						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
-					</div>
-			
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-			
-				</div>
-			</footer>	
+<hr>
 		</div>
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>

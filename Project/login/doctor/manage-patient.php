@@ -197,14 +197,6 @@ check_login();
 <div class="col-sm-8">
 <h1 class="mainTitle">DOCTOR| View Patients</h1>
 </div>
-<ol class="breadcrumb">
-<li>
-<span>DOCTOR</span>
-</li>
-<li class="active">
-<span>View Patients</span>
-</li>
-</ol>
 </div>
 </section>
 
@@ -216,7 +208,7 @@ check_login();
 <table class="table table-hover" id="sample-table-1">
 <thead>
 <tr>
-<th class="center">#</th>
+<th class="center">src</th>
 <th>Patient Name</th>
 <th>Patient Contact Number</th>
 <th>Patient Gender </th>
@@ -255,17 +247,7 @@ $cnt=$cnt+1;
 </div>
 </div>
 </div>
-
-
-<footer>
-<div class="footer-inner">
-<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span></div>
-					
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>
+<hr>
 	
 		</div>
 	

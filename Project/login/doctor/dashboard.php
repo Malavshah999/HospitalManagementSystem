@@ -196,16 +196,6 @@ check_login();
 								<div class="col-sm-8">
 					<h1 class="mainTitle">Doctor | Dashboard</h1></div>
 								
-								<ol class="breadcrumb">
-									<li>
-										<span>Doctor</span>
-									</li>
-									
-									<li class="active">
-										<span>Dashboard</span>
-									</li>
-								
-								</ol>
 							</div>
 						</section>
 
@@ -229,7 +219,7 @@ check_login();
 								<div class="col-sm-4">
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body"> 
-											<img src="assets/images/appointment.png" height="70" weight="100">
+											<img src="assets/images/appointment (2).png" height="70" weight="100">
 										    <h2 class="StepTitle">My Appointments</h2>
 										    <p class="cl-effect-1">
 									<a href="appointment-history.php">View Appointment History</a></p>
@@ -255,24 +245,12 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 </div>
 </div>
 		
-		<footer>
-				<div class="footer-inner">
-		
-					<div class="pull-left">
-						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
-					</div>
-		
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>
+		<hr>
 		</div>
 
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
-		
 		<script src="assets/js/main.js"></script>
 		<script src="assets/js/form-elements.js"></script>
 <script>
