@@ -231,15 +231,6 @@ error:function (){}
 <div class="col-sm-8">
 <h1 class="mainTitle">DOCTOR| Add Patient</h1>
 </div>
-
-<ol class="breadcrumb">
-<li>
-<span>Patient</span>
-</li>
-<li class="active">
-<span>Add Patient</span>
-</li>
-</ol>
 </div>
 </section>
 
@@ -310,13 +301,7 @@ error:function (){}
 </div>				
 </div>
 </div>
-
-<footer>
-<div class="footer-inner">
-<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span></div>
-
-</div>
-</footer>
+<hr>
 					</div>
 			</div>
 			</div>

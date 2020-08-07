@@ -197,14 +197,6 @@ check_login();
 <div class="col-sm-8">
 <h1 class="mainTitle">Doctor | Search Patients</h1>
 </div>
-<ol class="breadcrumb">
-<li>
-<span>Doctor</span>
-</li>
-<li class="active">
-<span>Search Patients</span>
-</li>
-</ol>
 </div>
 </section>
 
@@ -227,13 +219,13 @@ if(isset($_POST['search']))
 $sdata=$_POST['searchdata'];
 ?>
 
-<h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4>
+<h4 align="center">Result for "<?php echo $sdata;?>" keyword </h4>
 
 <table class="table table-hover" id="sample-table-1">
 <thead>
 
 <tr>
-<th class="center">#</th>
+<th class="center">src</th>
 <th>Patient Name</th>
 <th>Patient Contact Number</th>
 <th>Patient Gender </th>
@@ -286,13 +278,7 @@ else
 </div>
 </div>
 </div>
-
-<footer>
-<div class="footer-inner">
-<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span></div>
-</div>
-
-</footer>
+<hr>
 
 </div>
 	<script src="vendor/jquery/jquery.min.js"></script>

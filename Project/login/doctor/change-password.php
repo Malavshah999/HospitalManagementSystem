@@ -242,17 +242,6 @@ return true;
 								<div class="col-sm-8">
 									<h1 class="mainTitle">Doctor | Change Password</h1>
 																	</div>
-								<ol class="breadcrumb">
-
-									<li>
-										<span>Doctor</span>
-									</li>
-
-									<li class="active">
-										<span>Change Password</span>
-									</li>
-
-								</ol>
 							</div>
 
 						</section>
@@ -276,21 +265,21 @@ return true;
 														<div class="form-group">
 															<label for="exampleInputEmail1">Current Password</label>
 							
-							<input type="password" name="cpass" class="form-control"  placeholder="Enter Current Password">
+							<input type="password" name="cpass" class="form-control"  placeholder="Enter Current Password" required>
 														</div>
-							
+							<br>
 														<div class="form-group">
 															<label for="exampleInputPassword1">New Password</label>
 
 					<input type="password" name="npass" class="form-control"  placeholder="New Password"></div>
-														
+														<br>
                                                          <div class="form-group">
 													<label for="exampleInputPassword1">Confirm Password</label>
 
 						<input type="password" name="cfpass" class="form-control"  placeholder="Confirm Password">
 														</div>
 														
-														
+														<br>
 														
 								<button type="submit" name="submit" class="btn btn-o btn-primary">Submit</button>
 								
@@ -306,16 +295,7 @@ return true;
 							</div>
 					</div>
 			</div>
-	<footer>
-				<div class="footer-inner">
-					<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
-					</div>
-
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>		</div>
+	<hr>		</div>
 		
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>

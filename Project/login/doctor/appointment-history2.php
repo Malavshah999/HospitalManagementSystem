@@ -199,19 +199,13 @@ check_login();
 </div>
 </div>
 </section>
-<div class="appointment2">
-you donot have appointment
+<div class="appointment2" style="font-family:Numans;font-size:15px;">
+You do not have any appointments
 </div>
 
 </div>
 </div>
-<footer>
-<div class="footer-inner">
-<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span></div>
-</div>
-
-</footer>
-
+<hr>
 </div>
 	<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>

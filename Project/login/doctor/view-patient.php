@@ -193,21 +193,13 @@ check_login();
 <div class="col-sm-8">
 <h1 class="mainTitle">Doctor | Manage Patients</h1>
 </div>
-<ol class="breadcrumb">
-<li>
-<span>Doctor</span>
-</li>
-<li class="active">
-<span>Manage Patients</span>
-</li>
-</ol>
 </div>
 </section>
 
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
-<h5 class="over-title margin-bottom-15">Manage <span class="text-bold">Patients</span></h5>
+<h5 class="over-title margin-bottom-15"><span class="text-bold">Manage  Patients</span></h5>
 <?php
                                $vid=$_GET['viewid'];
                                $ret=mysqli_query($con,"select * from tblpatient where ID='$vid'");
@@ -220,6 +212,7 @@ while ($row=mysqli_fetch_array($ret)) {
  Patient Details</td></tr>
 
     <tr>
+	<br>
     <th scope>Patient Name</th>
     <td><?php  echo $row['PatientName'];?></td>
     <th scope>Patient Email</th>
@@ -239,7 +232,7 @@ while ($row=mysqli_fetch_array($ret)) {
   </tr>
   <tr>
     
-    <th>Patient Medical History(if any)</th>
+    <th>Patient Medical History ( if any )</th>
     <td><?php  echo $row['PatientMedhis'];?></td>
      <th>Patient Reg Date</th>
     <td><?php  echo $row['CreationDate'];?></td>

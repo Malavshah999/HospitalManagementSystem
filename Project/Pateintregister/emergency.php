@@ -12,7 +12,7 @@
 		<h5> Please fill in the patient details below </h5>
 		<br>
 		<div class="form">       
-			<form action="emeconnect.php"method="post">
+			<form action="emeconnect.php"method="POST">
 				<div class="inputfield">
 					<label for="name">FullName</label>
 					<input type="text" class="input" name="name" required>
@@ -59,7 +59,7 @@
 					<p>Agreed to terms and conditions</p>
 				</div> 
 				<div class="inputfield">
-					<input type="button" value="Register" class="btn">
+					<input type="submit" value="Register" class="btn">
 				</div>
 			</form>	
 		</div>
