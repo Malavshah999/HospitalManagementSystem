@@ -1,25 +1,10 @@
-/* ---------------------------------------------------------------------- 
->>> TABLE OF CONTENT
--------------------------------------------------------------------------
-1 - PERFECT-SCROLLBAR
-2 - BOOTSTRAP SLIDERS
-3 - TREE
-4 - IMAGE CROP
-5 - FILE UPLOAD
-6 - NESTABLE
-7 - SWEET ALERT
-8 - CALENDAR
-9 - CHARTJS
-10 - SPARKLINE
-/* ---------------------------------------------------------------------- */
-/*
-
-
-
-*/
-/* ---------------------------------------------------------------------- */
-/*  Perfect Scrollbar
-/* ---------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css?family=Numans');
+* {
+  margin: 0px; 
+  padding: 0px; 
+  box-sizing: border-box;
+  font-family:Numans;
+}
 .ps-container .ps-scrollbar-x-rail:hover,
 .ps-container .ps-scrollbar-x-rail.hover {
   background-color: #eee !important;

@@ -10,8 +10,8 @@ check_login();
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>Admin | View Patients</title>		
-		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+		<title>Admin | View Patients</title>
+		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />		
 		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
@@ -147,6 +147,10 @@ check_login();
 							<i class="ti-align-justify"></i>
 						</a>
 
+						<a class="navbar-brand" href="#">
+							<h2 style="padding-top:20%;font-family:Numans;">HMS</h2>
+						</a>
+						
 
 						<a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
 							<i class="ti-align-justify"></i>
@@ -164,14 +168,14 @@ check_login();
 					<div class="navbar-collapse collapse">
 						<ul class="nav navbar-right">
 							<!-- start: MESSAGES DROPDOWN -->
-								<li  style="padding-top:2% ">
+								<li  style="padding-top:2%;font-family:Numans;">
 								<h2>Hospital Management System</h2>
 							</li>
 						
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/system-administrator-png-system-administrator-logo-system-administrator-png-260_260.jpg" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
+									<img src="assets/images/admin.png" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
 								</a>
 
 								<ul class="dropdown-menu dropdown-dark">
@@ -219,11 +223,11 @@ check_login();
 <div class="container-fluid container-fullw bg-white">
 <div class="row">
 <div class="col-md-12">
-<h5 class="over-title margin-bottom-15">View <span class="text-bold">Patients</span></h5>
+<h5 class="over-title margin-bottom-15"><span class="text-bold">View Patients</span></h5>
 <table class="table table-hover" id="sample-table-1">
 <thead>
 <tr>
-<th class="center">#</th>
+<th class="center">src</th>
 <th>Patient Name</th>
 <th>Patient Contact Number</th>
 <th>Patient Gender </th>
@@ -267,16 +271,7 @@ $cnt=$cnt+1;
 
 
 
-<footer>
-<div class="footer-inner">
-<div class="pull-left">&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span></div>
-	
-
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>
+<hr>
 	
 		</div>
 	

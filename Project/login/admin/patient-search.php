@@ -12,7 +12,7 @@ check_login();
 		<title>Admin | View Patients</title>
 		
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-			<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
@@ -148,6 +148,12 @@ check_login();
 						<a href="#" class="sidebar-mobile-toggler pull-left hidden-md hidden-lg" class="btn btn-navbar sidebar-toggle" data-toggle-class="app-slide-off" data-toggle-target="#app" data-toggle-click-outside="#sidebar">
 							<i class="ti-align-justify"></i>
 						</a>
+						
+						<a class="navbar-brand" href="#">
+							<h2 style="padding-top:20%;font-family:Numans;">HMS</h2>
+						</a>
+						
+						
 			
 						<a href="#" class="sidebar-toggler pull-right visible-md visible-lg" data-toggle-class="app-sidebar-closed" data-toggle-target="#app">
 							<i class="ti-align-justify"></i>
@@ -171,7 +177,7 @@ check_login();
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/system-administrator-png-system-administrator-logo-system-administrator-png-260_260.jpg" > 
+									<img src="assets/images/admin.png" > 
 									<span class="username">Admin<i class="ti-angle-down"></i></i></span>
 								</a>
 
@@ -232,11 +238,11 @@ if(isset($_POST['search']))
 
 $sdata=$_POST['searchdata'];
   ?>
-  <h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4>
+  <h4 align="center">Result for "<?php echo $sdata;?>" keyword </h4>
 <table class="table table-hover" id="sample-table-1">
 <thead>
 <tr>
-<th class="center">#</th>
+<th class="center">src</th>
 <th>Patient Name</th>
 <th>Patient Contact Number</th>
 <th>Patient Gender </th>
@@ -285,16 +291,7 @@ $cnt=$cnt+1;
 </div>
 </div>
 </div>
-</div><footer>
-				<div class="footer-inner">
-					<div class="pull-left">
-						&copy; <span class="current-year"></span><span class="text-bold text-uppercase"> HMS</span>. <span>All rights reserved</span>
-					</div>
-					<div class="pull-right">
-						<span class="go-top"><i class="ti-angle-up"></i></span>
-					</div>
-				</div>
-			</footer>
+</div><hr>
 		
 		
 	</div>
@@ -303,7 +300,6 @@ $cnt=$cnt+1;
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
 		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
-		
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
