@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2020 at 01:31 PM
+-- Generation Time: Aug 08, 2020 at 01:58 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -67,7 +67,8 @@ CREATE TABLE `appointment` (
 INSERT INTO `appointment` (`id`, `patient`, `doctor`, `date`, `timeslot`, `fees`, `contact`, `address`, `disease`) VALUES
 (3, 'akramulali8067@gmail.com', 'Swaroop Gopal', '2020-12-31', '1:00-2:00 p.m.', 100, '7045053487', 'mumbai', 'no'),
 (4, 'akramulali8@gmail.com', 'Mr. Swaroop Gopal', '2020-12-31', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(5, 'akramulali972348@gmail.com', 'akram', '2020-12-31', '2:00-3:00 p.m.', 100, '8145222222', 'mumbai', 'no');
+(5, 'akramulali972348@gmail.com', 'akram', '2020-12-31', '2:00-3:00 p.m.', 100, '8145222222', 'mumbai', 'no'),
+(6, 'akramulali972348@gmail.com', 'Dr. Anjila Aneja', '2020-12-31', '6:00-7:00 p.m.', 100, '8145220128', 'mumbai', 'no');
 
 -- --------------------------------------------------------
 
@@ -119,7 +120,8 @@ INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`
 (22, 'Neurology', 'akram', 'mumbai', '1000', 7045053487, 'akramul69@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:08:08', NULL),
 (23, 'Neurology', 'Dr. Amit Shrivastava', 'mumbai', '2000', 8145220120, 'akramul6709@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:15:16', NULL),
 (24, 'Gastroenterology', 'Swaroop Gopal', 'mumbai', '3000', 8145220129, 'akramul68@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-07 04:16:13', NULL),
-(25, 'Cardiologist', 'akram', 'mumbai', '1000', 8145220125, 'akramul6900@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-08 10:15:48', NULL);
+(25, 'Cardiologist', 'akram', 'mumbai', '1000', 8145220125, 'akramul6900@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-08 10:15:48', NULL),
+(26, 'Neurology', 'akramul', 'mumbai', '2000', 8145220129, 'akramulali69@gmail.com', '25d55ad283aa400af464c76d713c07ad', '2020-08-08 13:39:01', NULL);
 
 -- --------------------------------------------------------
 
@@ -130,7 +132,7 @@ INSERT INTO `doctors` (`id`, `specilization`, `doctorName`, `address`, `docFees`
 CREATE TABLE `doctorsignup` (
   `id` int(11) NOT NULL,
   `fullname` varchar(30) NOT NULL,
-  `phonenumber` varchar(12) NOT NULL,
+  `phonenumber` varchar(15) NOT NULL,
   `email` varchar(30) NOT NULL,
   `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -140,17 +142,9 @@ CREATE TABLE `doctorsignup` (
 --
 
 INSERT INTO `doctorsignup` (`id`, `fullname`, `phonenumber`, `email`, `password`) VALUES
-(0, 'Sk Akramul', '7045053487', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d7'),
-(0, 'Sk Akramul Ali', '8145220128', 'akramulali97234@gmail.com', '25d55ad283aa400af464c76d7'),
-(0, 'Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '25d55ad283aa400af464c76d7'),
-(0, 'Sk Akramul Ali', '8145220128', 'technicalakramul70@gmail.com', '42b02d1377ca4ffced107a584'),
-(0, 'Akram', '8145220129', 'technicalakramul7777@gmail.com', '25d55ad283aa400af464c76d7'),
-(0, 'Sk Akramul Ali', '8145220128', 'technicalakramul997@gmail.com', '42b02d1377ca4ffced107a584'),
-(0, 'Sk Akramul', '7045053487', 'technicalakramul790@gmail.com', '25d55ad283aa400af464c76d7'),
-(0, 'Sk Akramul Ali', '7045053487', 'technicalakramul789@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-(0, 'Sk Akramul Ali', '8452255622', 'technicalakramul786@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-(0, 'Sk Akramul Ali', '8145220128', 'akramulali972384@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
-(0, 'Sk Akramul Ali', '8145220128', 'technicalakramul7000@gmail.com', '25d55ad283aa400af464c76d713c07ad');
+(1, 'Sk Akramul Ali', '8145220128', 'akramulali998@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(2, 'Sk Akramul Ali', '8145220128', 'akramulali798@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(3, 'Sk Akramul Ali', '7045053487', 'akramulali79989@gmail.com', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
@@ -176,7 +170,8 @@ INSERT INTO `doctorspecilization` (`id`, `specilization`, `creationDate`, `updat
 (4, 'Cardiology', '2020-08-07 03:29:47', '2020-08-07 03:29:47'),
 (5, 'Gynaecologist', '2020-08-07 03:29:59', '2020-08-07 03:29:59'),
 (6, 'Surgery', '2020-08-07 03:30:06', '2020-08-07 03:30:06'),
-(7, 'Neurology', '2020-08-07 03:30:14', '2020-08-07 03:30:14');
+(7, 'Neurology', '2020-08-07 03:30:14', '2020-08-07 03:30:14'),
+(30, 'DENTAL', '2020-08-08 13:38:05', '2020-08-08 13:38:05');
 
 -- --------------------------------------------------------
 
@@ -314,7 +309,8 @@ INSERT INTO `tblpatient` (`ID`, `Docid`, `PatientName`, `PatientContno`, `Patien
 (19, 1, 'Sk Akramul Ali', 8145220128, 'akramulali888@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:34:33'),
 (20, 1, 'Akramul', 7045053487, 'akramulali8067@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:07'),
 (21, 1, 'Akramul Ali', 8145220129, 'akramulali19@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:46'),
-(22, 1, 'Akramul Ali', 8145220129, 'akramulali19@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:46');
+(22, 1, 'Akramul Ali', 8145220129, 'akramulali19@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-07 03:35:46'),
+(23, 1, 'Akramul Ali', 8145220125, 'akramulali888@gmail.com', 'male', 'mumbai', 21, 'nothing', '2020-08-08 13:39:39');
 
 --
 -- Indexes for dumped tables
@@ -336,6 +332,12 @@ ALTER TABLE `appointment`
 -- Indexes for table `doctors`
 --
 ALTER TABLE `doctors`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `doctorsignup`
+--
+ALTER TABLE `doctorsignup`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -382,19 +384,25 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `doctors`
 --
 ALTER TABLE `doctors`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+
+--
+-- AUTO_INCREMENT for table `doctorsignup`
+--
+ALTER TABLE `doctorsignup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `doctorspecilization`
 --
 ALTER TABLE `doctorspecilization`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT for table `emergency`
@@ -418,7 +426,7 @@ ALTER TABLE `patientsignup`
 -- AUTO_INCREMENT for table `tblpatient`
 --
 ALTER TABLE `tblpatient`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
