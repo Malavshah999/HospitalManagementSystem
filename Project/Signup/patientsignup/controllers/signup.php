@@ -67,7 +67,7 @@ if(count($signup_errors) > 0){
     //$_SESSION['user_details'] = $user_details;
 
     // Redirect to Home Dashboard
-     echo"<script> location.href='../../../login/patientlogin.php'</script>";
+     echo"<script> location.href='../../../login/patient/index.php'</script>";
 }
 ?>
 
