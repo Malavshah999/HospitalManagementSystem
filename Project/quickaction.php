@@ -15,7 +15,8 @@ else
 	$stmt=$conn->prepare("insert into quickcontact(name,email,textarea) values(?,?,?)");
 	$stmt->bind_param("sss",$name,$email,$textarea);
 	$stmt->execute();
-	echo "message sent succesfully........";
+echo "<script>alert('message sent Successfully');</script>";
+echo "<script>location.href='index.php'</script>";
 	$stmt->close();
 	$conn->close();
 

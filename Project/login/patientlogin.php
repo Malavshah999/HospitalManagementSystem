@@ -8,10 +8,7 @@
 <body>
 
 	<form action="data.php" id="id01" class="modal-content animate" method="POST">
-		<div class="closecontainer">
-			<span onclick="document.getElementById('id01')" class="close" title="Close">&times;</span> 
-		</div>
-	
+		
 		<div class="container">
 			<center><h2>Patient Login </h2></center><br/><br/>
 			<div class="input-group-prepend">
