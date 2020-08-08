@@ -401,13 +401,6 @@
 								<a href="#">HMS</a>	
 							</div>
 							<div class="footer_about_text">HOSPITAL MANAGEMENT SYSTEM</div>
-							<div class="footer_social">
-								<ul class="d-flex flex-row align-items-center justify-content-start">
-									<li><a href="https://www.instagram.com/accounts/login/?hl=en" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
-									<li><a href="https://www.facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-									<li><a href="https://twitter.com/login?lang=en-gb" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								</ul>
-							</div>
 							<div class="copyright">
 								Copyright &copy; 2020
 								All rights reserved | This project is made by Akramul and Malav</a>
