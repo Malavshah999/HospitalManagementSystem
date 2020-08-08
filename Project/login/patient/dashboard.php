@@ -1,6 +1,5 @@
 <?php
 session_start();
-error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
@@ -12,7 +11,7 @@ check_login();
 
 		<title>Patient | Dashboard</title>
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
-			<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 		<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="vendor/themify-icons/themify-icons.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
@@ -24,7 +23,10 @@ check_login();
 	<body>
 
 
-
+<?php
+	if(isset($_SESSION["username"]))
+	{
+		?>
 
 	<div id="app">
 		<div class="sidebar app-aside" id="sidebar">
@@ -65,7 +67,7 @@ check_login();
 							</li>
 					
 							<li>
-								<a href="appointment-history.php">
+								<a href="view-history.php">
 									<div class="item-content">
 										<div class="item-media">
 											<i class="ti-list"></i>
@@ -82,7 +84,6 @@ check_login();
 					</nav>
 					</div>
 			</div>
-<?php error_reporting(0);?>
 <header class="navbar navbar-default navbar-static-top">
 					<!-- start: NAVBAR HEADER -->
 					<div class="navbar-header">
@@ -186,9 +187,9 @@ check_login();
 									<div class="panel panel-white no-radius text-center">
 										<div class="panel-body"> 
 											<img src="assets/images/appointment (2).png" height="70" weight="100">
-										    <h2 class="StepTitle">My Appointments</h2>
+										    <h2 class="StepTitle">My History</h2>
 										    <p class="cl-effect-1">
-									<a href="appointment-history.php">View Appointment History</a></p>
+									<a href="view-history.php">View Appointment History</a></p>
 										</div>
 									</div>
 								</div>
@@ -215,5 +216,11 @@ check_login();
 				FormElements.init();
 			});
 		</script>
+		<?php
+	}
+	else{
+		echo "<script>location.href='index.php'</script>";
+	}
+	?>
 	</body>
 </html>
