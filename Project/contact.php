@@ -2,16 +2,13 @@
 <html lang="en">
 <head>
 	<title>Contact</title>
-
-	<link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/contact.css">
 	<link rel="stylesheet" type="text/css" href="styles/contact_responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/main_styles.css">
-	<link rel="stylesheet" type="text/css" href="styles/responsive.css">
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
 	<link rel="stylesheet" type="text/css" href="styles/icon-font.min.css">
-<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
 	<link rel="stylesheet" type="text/css" href="styles/main2.css">
 
 </head>
@@ -19,7 +16,7 @@
 <body>
 		<div class="super_container">
 		<div class="home">
-			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_1.jpg"></div>
+			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_3.jpg"></div>
 			<header class="header" id="header">
 				<div>
 					<div class="header_top">
@@ -78,22 +75,22 @@
 		<div class="wrap-contact100">
 			<form action="action.php" method="post" class="contact100-form validate-form">
 				<span class="contact100-form-title">Send Us A Message</span>
-				<label class="label-input100" for="name">Tell us your name *</label>
+				<label class="label-input100" for="name">Tell us your name </label>
 
 				<div class="wrap-input100 validate-input" data-validate = "Type full name">
-					<input id="name" class="input100" type="text" name="name" placeholder=" Please Full name!">
+					<input id="name" class="input100" type="text" name="name" placeholder=" Type your full name ">
 					<span class="focus-input100"></span>
 				</div>
 
-				<label class="label-input100" for="email">Enter your email *</label>
-				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-					<input id="email" class="input100" type="text" name="email" placeholder="Eg. example@email.com">
+				<label class="label-input100" for="email">Enter your email </label>
+				<div class="wrap-input100 validate-input" data-validate = "Valid email is required: abc@mail.com" required>
+					<input id="email" class="input100" type="text" name="email" placeholder="Eg. abc@mail.com">
 		          <span class="focus-input100"></span>
 				</div>
 
 				<label class="label-input100" for="phone">Enter phone number</label>
 				<div class="wrap-input100">
-					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +1 800 000000">
+					<input id="phone" class="input100" type="text" name="phone" placeholder="Eg. +91 989 289 9997">
 					<span class="focus-input100"></span>
 				</div>
 				
@@ -101,7 +98,7 @@
 
 
 
-				<label class="label-input100" for="message">Message *</label>
+				<label class="label-input100" for="message">Message</label>
 				<div class="wrap-input100 validate-input" data-validate = "Message is required">
 					<textarea id="message" class="input100" name="message" placeholder="Write us a message"></textarea>
 					<span class="focus-input100"></span>
@@ -144,7 +141,7 @@
 					</div>
 
 					<div class="flex-col size2">
-						<span class="txt1 p-b-20">General Suppor</span>
+						<span class="txt1 p-b-20">General Support</span>
 						<span class="txt3">akramulali8067@gmail.com
 						</span>
 					</div>

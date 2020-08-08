@@ -14,7 +14,7 @@
 
 <body>
 	<div class="super_container">
-		<!-- Home -->
+		
 		<div class="home">
 			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_1.jpg"></div>
 			<!-- Header -->
