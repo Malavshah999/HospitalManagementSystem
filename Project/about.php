@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>About us</title>
-	
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="styles/aboutt.css">
 	<link rel="stylesheet" type="text/css" href="styles/about_responsive.css">
@@ -387,13 +387,12 @@
 	</div>
 	<hr>
 	
-	<!-- Footer -->
 	<footer class="footer">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"/>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div>
 		<div class="footer_content">
 			<div class="container">
 				<div class="row">
-					<!--About -->
+					<!-- About -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
 							<div class="HMS">
@@ -457,8 +456,8 @@
 				</div>
 			</div>
 		</div>
-		</div>
 	</footer>
+
 	<script>
 	
 		// Get the Modal 
