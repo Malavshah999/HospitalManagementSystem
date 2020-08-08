@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Aug 08, 2020 at 10:53 AM
+-- Generation Time: Aug 08, 2020 at 01:31 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.1.30
 
@@ -50,7 +50,7 @@ INSERT INTO `admin` (`id`, `username`, `password`, `updationDate`) VALUES
 
 CREATE TABLE `appointment` (
   `id` int(20) NOT NULL,
-  `patient` varchar(25) NOT NULL,
+  `patient` varchar(50) NOT NULL,
   `doctor` varchar(25) NOT NULL,
   `date` date NOT NULL,
   `timeslot` varchar(25) NOT NULL,
@@ -65,13 +65,9 @@ CREATE TABLE `appointment` (
 --
 
 INSERT INTO `appointment` (`id`, `patient`, `doctor`, `date`, `timeslot`, `fees`, `contact`, `address`, `disease`) VALUES
-(15, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-08-13', '9:00-10:00 a.m.', 1000, '8145220128', 'mumbai', 'no'),
-(16, 'akramulali80679@gmail.com', 'akram', '2020-08-13', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(17, 'akramulali80679@gmail.com', 'akram', '2020-08-04', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(18, 'akramulali80679@gmail.com', 'Swaroop Gopal', '2020-08-04', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(19, 'akramulali80679@gmail.com', 'Swaroop Gopal', '2020-08-11', '10:00-11:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(20, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-08-19', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
-(21, 'akramulali80679@gmail.com', 'Dr. Monaksh Shah', '2020-07-30', '11:00-12:00 a.m.', 100, '8145220128', 'mumbai', 'no');
+(3, 'akramulali8067@gmail.com', 'Swaroop Gopal', '2020-12-31', '1:00-2:00 p.m.', 100, '7045053487', 'mumbai', 'no'),
+(4, 'akramulali8@gmail.com', 'Mr. Swaroop Gopal', '2020-12-31', '9:00-10:00 a.m.', 100, '8145220128', 'mumbai', 'no'),
+(5, 'akramulali972348@gmail.com', 'akram', '2020-12-31', '2:00-3:00 p.m.', 100, '8145222222', 'mumbai', 'no');
 
 -- --------------------------------------------------------
 
@@ -92,7 +88,8 @@ CREATE TABLE `contactus` (
 
 INSERT INTO `contactus` (`name`, `email`, `phone`, `message`) VALUES
 ('Sk  Akramul Ali', 'technicalakramul7@gmail.com', '8145220128', 'hi'),
-('SK AKRAMUL ALI', 'akramulali97234@gmail.com', '8145220128', 'hii');
+('SK AKRAMUL ALI', 'akramulali97234@gmail.com', '8145220128', 'hii'),
+('Sk  Akramul Ali', 'akramulali97234@gmail.com', '8145220128', 'hiii');
 
 -- --------------------------------------------------------
 
@@ -202,7 +199,8 @@ CREATE TABLE `emergency` (
 --
 
 INSERT INTO `emergency` (`id`, `name`, `gender`, `birthday`, `Contact`, `Postal`, `textarea`) VALUES
-(5, 'Sk  Akramul Ali', 'male', '2020-12-30', '8145220128', 400011, 'mumbai');
+(5, 'Sk  Akramul Ali', 'male', '2020-12-30', '8145220128', 400011, 'mumbai'),
+(6, 'SK AKRAMUL ALI', 'male', '2019-12-31', '8145220128', 400011, 'mumbai');
 
 -- --------------------------------------------------------
 
@@ -234,7 +232,8 @@ CREATE TABLE `patient` (
 INSERT INTO `patient` (`id`, `name`, `email`, `gender`, `birthday`, `Height`, `weight`, `Contact`, `Marital`, `textarea`, `disease`, `surgeries`, `phobia`, `medics`) VALUES
 (19, 'Malav Shah', 'malav1999@yahoo.com', 'female', '2018-12-31', '22', '22', '222', 'Single', 'a', 'a', 'a', 'a', 'a'),
 (20, 'Malav Shah', 'malav1999@yahoo.com', 'female', '2018-12-31', '22', '22', '222', 'Single', 'a', 'a', 'a', 'a', 'a'),
-(21, 'Sk  Akramul Ali', 'technicalakramul7@gmail.c', 'male', '2020-08-07', '7', '50', '8145220128', 'Single', 'mumbai', 'no', 'na', 'na', 'na');
+(21, 'Sk  Akramul Ali', 'technicalakramul7@gmail.c', 'male', '2020-08-07', '7', '50', '8145220128', 'Single', 'mumbai', 'no', 'na', 'na', 'na'),
+(22, 'Sk  Akramul Ali', 'technicalakramul7@gmail.com', 'male', '2020-12-31', '7', '50', '8145220128', 'Single', 'mumbai', 'no', 'na', 'na', 'na');
 
 -- --------------------------------------------------------
 
@@ -243,7 +242,7 @@ INSERT INTO `patient` (`id`, `name`, `email`, `gender`, `birthday`, `Height`, `w
 --
 
 CREATE TABLE `patientsignup` (
-  `id` int(11) DEFAULT NULL,
+  `id` int(11) NOT NULL,
   `fullname` varchar(25) NOT NULL,
   `phonenumber` varchar(15) NOT NULL,
   `email` varchar(30) NOT NULL,
@@ -255,7 +254,10 @@ CREATE TABLE `patientsignup` (
 --
 
 INSERT INTO `patientsignup` (`id`, `fullname`, `phonenumber`, `email`, `password`) VALUES
-(0, 'Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '25d55ad283aa400af464c76d713c07ad');
+(1, 'Sk Akramul Ali', '8145220128', 'technicalakramul7@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(2, 'Sk Akramul Ali', '7045053487', 'akramulali8067@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(3, 'Sk Akramul Ali', '8145220128', 'akramulali8@gmail.com', '25d55ad283aa400af464c76d713c07ad'),
+(4, 'Akram', '8145220128', 'akramulali972348@gmail.com', '25d55ad283aa400af464c76d713c07ad');
 
 -- --------------------------------------------------------
 
@@ -282,7 +284,8 @@ INSERT INTO `quickcontact` (`name`, `email`, `textarea`) VALUES
 ('Sk  Akramul Ali', 'technicalakramul7@gmail.com', 'hhi'),
 ('Sk  Akramul Ali', 'technicalakramul7@gmail.com', 'hhi'),
 ('akram', 'akramulali8067@gmail.com', 'gg'),
-('Sk  Akramul Ali', 'akramulali8067@gmail.com', 'hiiii');
+('Sk  Akramul Ali', 'akramulali8067@gmail.com', 'hiiii'),
+('Sk  Akramul Ali', 'technicalakramul7@gmail.com', 'hii');
 
 -- --------------------------------------------------------
 
@@ -354,6 +357,12 @@ ALTER TABLE `patient`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `patientsignup`
+--
+ALTER TABLE `patientsignup`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `tblpatient`
 --
 ALTER TABLE `tblpatient`
@@ -373,7 +382,7 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `appointment`
 --
 ALTER TABLE `appointment`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `doctors`
@@ -391,13 +400,19 @@ ALTER TABLE `doctorspecilization`
 -- AUTO_INCREMENT for table `emergency`
 --
 ALTER TABLE `emergency`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `patient`
 --
 ALTER TABLE `patient`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT for table `patientsignup`
+--
+ALTER TABLE `patientsignup`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tblpatient`

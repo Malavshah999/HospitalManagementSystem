@@ -60,7 +60,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 		<?php 
 	}
 	else{
-		echo "<script>location.href='appointment-history2.php'</script>";
+		echo "<script>location.href='patient-booking.php'</script>";
 	}
 	?>
 </body>
