@@ -189,7 +189,7 @@ check_login();
 											<img src="assets/images/appointment (2).png" height="70" weight="100">
 										    <h2 class="StepTitle">My History</h2>
 										    <p class="cl-effect-1">
-									<a href="view-history.php">View Appointment History</a></p>
+									<a href="appointment-history.php">View Appointment History</a></p>
 										</div>
 									</div>
 								</div>
