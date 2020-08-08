@@ -30,7 +30,7 @@ if(isset($_SESSION["username"]))
 							</tr>
 						</thead>
 			<?php
-				$sql = "SELECT * FROM appointment where doctor='".$_SESSION["doctor"]."'";
+				$sql = "SELECT * FROM appointment where patient='".$_SESSION["patient"]."'";
 				$result=$conn->query($sql);
 				if($result->num_rows > 0){
 					while($rows= $result->fetch_assoc()){

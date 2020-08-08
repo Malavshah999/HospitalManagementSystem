@@ -19,6 +19,7 @@ else
 	values(?,?,?,?,?,?)");
 	$stmt->bind_param("ssssss",$name,$gender,$birthday,$Contact,$Postal,$textarea);
 	$stmt->execute();
+	echo "<script>alert('Emergency Pateint Register Successfully');</script>";
 	echo "<script> location.href='../index.php'</script>";
 	$stmt->close();
 	$conn->close();

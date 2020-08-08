@@ -27,6 +27,7 @@ else
 	values(?,?,?,?,?,?,?,?,?,?,?,?,?)");
 	$stmt->bind_param("sssssssssssss",$name,$email,$gender,$birthday,$Height,$weight,$Contact,$Marital,$textarea,$disease,$surgeries,$phobia,$medics);
 	$stmt->execute();
+	echo "<script>alert('Pateint Register Successfully');</script>";
 	echo "<script>location.href='../index.php'</script>";
 	$stmt->close();
 	$conn->close();

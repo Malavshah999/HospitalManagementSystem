@@ -170,6 +170,8 @@
 
 <!-- Footer -->
 
+	<!-- Footer -->
+
 	<footer class="footer">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div>
 		<div class="footer_content">
