@@ -57,7 +57,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 		<?php 
 	}
 	else{
-		echo "<script>location.href='patientlogin.php'</script>";
+		echo "<script>location.href='index.php'</script>";
 	}
 	?>
 </body>

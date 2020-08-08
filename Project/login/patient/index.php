@@ -8,29 +8,15 @@ $ret=mysqli_query($con,"SELECT * FROM patientsignup WHERE email='".$_POST['usern
 $num=mysqli_fetch_array($ret);
 if($num>0)
 {
-$extra="dashboard.php";
-$_SESSION['dlogin']=$_POST['username'];
+$_SESSION["username"]=$_POST['username'];
 $_SESSION['id']=$num['id'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$status=1;
-$log=mysqli_query($con,"insert into doctorslog(uid,username,userip,status) values('".$_SESSION['id']."','".$_SESSION['dlogin']."','$uip','$status')");
-$host=$_SERVER['HTTP_HOST'];
-$uri=rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+echo '<script> window.location="dashboard.php"; </script>';
 }
 else
 {
-$host  = $_SERVER['HTTP_HOST'];
-$_SESSION['dlogin']=$_POST['username'];
-$uip=$_SERVER['REMOTE_ADDR'];
-$status=0;
-mysqli_query($con,"insert into doctorslog(username,userip,status) values('".$_SESSION['dlogin']."','$uip','$status')");
-$_SESSION['errmsg']="Invalid username or password";
-$extra="index.php";
-$uri  = rtrim(dirname($_SERVER['PHP_SELF']),'/\\');
-header("location:http://$host$uri/$extra");
-exit();
+$_SESSION["username"]=$_POST['username'];
+echo "<script> alert('username or password incorrect !')</script>";
+echo '<script> window.location="index.php"; </script>';
 }
 }
 ?>

@@ -11,8 +11,8 @@ if($conn->connect_error)
 }
 else
 {
-	$stmt=$conn->prepare("insert into appointment(doctor,date,timeslot,contact,address,disease,fees,patient) 
-						values(?,?,?,?,?,?,?,?)");
+	$stmt=$conn->prepare("INSERT INTO appointment(doctor,date,timeslot,contact,address,disease,fees,patient) 
+						VALUES(?,?,?,?,?,?,?,?)");
 	$stmt->bind_param("ssssssis",$_SESSION["doctor"],$_SESSION["date"],$_SESSION["timeslot"],$_SESSION["contact"],
 								$_SESSION["address"],$_SESSION["disease"],$_SESSION["fees"],$_SESSION["email"]);
 	$stmt->execute();
