@@ -18,63 +18,49 @@
 			<br>
 			<form action="dashboard.php">
 				<div class="row">
-					<div class="col-25">
-						Patient :
-					</div>
+					<div class="col-25">Patient : </div>
 					<div class="col-75">
 					<?php echo $_SESSION["username"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Doctor :
-					</div>
+					<div class="col-25">Doctor :</div>
 					<div class="col-75">
 					<?php echo $_SESSION["doctor"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Date :
-					</div>
+					<div class="col-25">Date : </div>
 					<div class="col-75">
 					<?php echo $_SESSION["date"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Timeslot :
-					</div>
+					<div class="col-25">Timeslot : </div>
 					<div class="col-75">
 					<?php echo $_SESSION["timeslot"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Contact :
-					</div>
+					<div class="col-25">Contact : </div>
 					<div class="col-75">
 					<?php echo $_SESSION["contact"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Address :
-					</div>
+					<div class="col-25">Address : </div>
 					<div class="col-75">
 					<?php echo $_SESSION["address"]; ?>
 					</div>
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
-						Disease	:
-					</div>
+					<div class="col-25">Disease	: </div>
 					<div class="col-75">
 					<?php echo $_SESSION["disease"]; ?>
 					</div>
