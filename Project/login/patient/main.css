@@ -124,7 +124,7 @@ th, td {
 .table100.ver4 td {
   font-family: Numans;
   font-size: 14px;
-  color: #808080;
+  color:#000000;
   line-height: 1.4;
 }
 
@@ -134,11 +134,11 @@ th, td {
   color: #fff;
   line-height: 1.4;
   text-transform: uppercase;
-  background-color: #4CAF50;
+  background-color:blue;
 }
 
 .table100.ver4 .row100:hover td {
-  color: #20d027;
+  color:blue;
 }
 /*
 .table100.ver4 .hov-column-ver4 {
@@ -150,6 +150,47 @@ th, td {
 }
 */
 .table100.ver4 .row100 td:hover {
-  background-color: #b1efb4;
-  color: #348c37;
+  background-color: #c1c1f0;
+  color:black;
+}
+
+.button5{
+	
+  border-radius:2px;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  text-decoration:none
+}
+
+.button5 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+text-decoration:none
+}
+
+.button5 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button5:hover span {
+  padding-right: 25px;
+}
+
+.button5:hover span:after {
+  opacity: 1;
+  right: 0;
 }

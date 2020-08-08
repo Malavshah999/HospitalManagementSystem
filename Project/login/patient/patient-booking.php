@@ -103,9 +103,6 @@ session_start();
 					<div class="col-25">
 						<button class="button">Book</button>
 					</div>
-					<div class="col-25">
-						<input type="reset" value="Reset">
-					</div>
 				</div>
 			</form>
 		</div>

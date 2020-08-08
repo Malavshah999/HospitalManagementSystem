@@ -21,7 +21,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 				<table data-vertable="ver4">
 					<thead>
 						<tr class="row100 head">
-							<th class="column100 column1" data-column="column1">doctor</th>
+							<th class="column100 column1" data-column="column1">patient</th>
 							<th class="column100 column2" data-column="column2">date </th>
 							<th class="column100 column3" data-column="column3">timeslot</th>	
 							<th class="column100 column4" data-column="column4">contact</th>
@@ -30,6 +30,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 							<th class="column100 column7" data-column="column7">view</th>
 						</tr>
 					</thead>
+
 					<?php
 					$sql = "SELECT * FROM appointment where patient='".$_SESSION["email"]."'";
 					$result=$conn->query($sql);
@@ -38,15 +39,17 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 							?>
 							<tbody>
 								<tr class="row100">
-									<td class="column100 column1" data-column="column1"><?php echo $rows["doctor"]; ?></td>
+									<td class="column100 column1" data-column="column1"><?php echo $rows["patient"]; ?></td>
 									<td class="column100 column2" data-column="column2"><?php echo $rows["date"]; ?></td>
 									<td class="column100 column3" data-column="column3"><?php echo $rows["timeslot"]; ?></td>
 									<td class="column100 column4" data-column="column4"><?php echo $rows["contact"]; ?></td>
 									<td class="column100 column5" data-column="column5"><?php echo $rows["address"]; ?></td>
 									<td class="column100 column6" data-column="column6"><?php echo $rows["disease"]; ?></td>
-									<td class="column100 column7" data-column="column7"><a href="view.php?id=<?php echo $rows["id"];?>" > View </a></td>
+									<td class="column100 column7" data-column="column7">
+									<button class="button5"><a href="view.php?id=<?php echo $rows["id"];?>" ><span>View</span> </a></td></button>
 								</tr>
 							</tbody>
+
 							<?php 
 						}
 					}
@@ -57,7 +60,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 		<?php 
 	}
 	else{
-		echo "<script>location.href='index.php'</script>";
+		echo "<script>location.href='appointment-history2.php'</script>";
 	}
 	?>
 </body>

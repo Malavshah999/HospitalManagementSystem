@@ -67,7 +67,7 @@ check_login();
 							</li>
 					
 							<li>
-								<a href="view-history.php">
+								<a href="appointment-history.php">
 									<div class="item-content">
 										<div class="item-media">
 											<i class="ti-list"></i>
