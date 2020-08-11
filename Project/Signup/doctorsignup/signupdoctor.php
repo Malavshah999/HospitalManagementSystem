@@ -52,7 +52,9 @@ include './controllers/db_connection.php' ;
 				<button>
 					<span>Register</span>
 				</button>
-
+<br><br>
+<p>Already have an account?<a href="../../login/doctor/index.php"> Login Now!</a></p>
+		
 			</form>
 
 

@@ -29,6 +29,7 @@ p
 	-webkit-font-smoothing: antialiased;
 	-webkit-text-shadow: rgba(0,0,0,.01) 0 0 1px;
 	text-shadow: rgba(0,0,0,.01) 0 0 1px;
+
 }
 .section_title
 {
@@ -341,9 +342,12 @@ p
 .reviews {
 	font-size:10;
 	font-family: Sitka Text ;
-	line-height: 1.4 ;	
+	line-height: 1.4 ;
+   
 }
 .review {
 	padding-top: 20px;
 	padding-left: 100px;
+	padding-bottom:20px;
+padding-right:0px;
 }

@@ -11364,3 +11364,19 @@ font-family: 'themify';
 text-decoration:none;
 
 }
+
+
+.but2
+{
+width:100%;
+color:blue;	
+cursor: pointer;
+outline: none;
+  
+}
+.but2:hover {background-color: #9999ff}
+.but2:active {
+  background-color: #0000ff;
+  transform: translateY(4px);
+  color:white;
+}

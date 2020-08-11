@@ -32,7 +32,7 @@ $conn= new mysqli('localhost','root','','hospitalmanagement');
 					</thead>
 
 					<?php
-					$sql = "SELECT * FROM appointment where patient='".$_SESSION["email"]."'";
+					$sql = "SELECT * FROM appointment where doctor='".$_SESSION["doctor"]."'";
 					$result=$conn->query($sql);
 					if($result->num_rows > 0){
 						while($rows= $result->fetch_assoc()){

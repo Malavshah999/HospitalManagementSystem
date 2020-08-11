@@ -247,7 +247,6 @@ $sdata=$_POST['searchdata'];
 <th>Patient Contact Number</th>
 <th>Patient Gender </th>
 <th>Creation Date </th>
-<th>Updation Date </th>
 <th>Action</th>
 </tr>
 </thead>
@@ -267,12 +266,8 @@ while($row=mysqli_fetch_array($sql))
 <td><?php echo $row['PatientContno'];?></td>
 <td><?php echo $row['PatientGender'];?></td>
 <td><?php echo $row['CreationDate'];?></td>
-<td><?php echo $row['UpdationDate'];?>
-</td>
 <td>
-
 <a href="view-patient.php?viewid=<?php echo $row['ID'];?>"><i class="fa fa-eye"></i></a>
-
 </td>
 </tr>
 <?php 

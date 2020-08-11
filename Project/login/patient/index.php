@@ -73,7 +73,12 @@ echo '<script> window.location="index.php"; </script>';
 <button type="submit" class="btn btn-primary pull-right" name="submit">Login <i class="fa fa-arrow-circle-right"></i>
 								</button>
 <input type="button" class="btn btn-primary pull-left" value="Go Back!" onclick="history.back(-1)" /></div>
-							
+
+
+<br><br>
+<p style="color: blue;float:center;text-align: center;">New To Patient Login?</p>
+<button class="but2"><a href="../../Signup/patientsignup/signuppateint.php">Signup Here!</button></a>
+									
 						</fieldset>
 					
 					</form>
