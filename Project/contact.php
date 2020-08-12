@@ -40,7 +40,7 @@
 								<li><a href="#">User Login</a>
 										<ul class="nav-dropdown">
 										<li><a href="login/doctor/index.php">Doctor's Login</a></li>
-										<li><a href="login/patientlogin.php">Patient's Login</a></li>
+										<li><a href="login/patient/index.php">Patient's Login</a></li>
 										<li><a href="login/admin/index.php">Admin Login</a></li>
 									</ul>
 								</li>

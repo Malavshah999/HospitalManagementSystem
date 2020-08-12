@@ -122,7 +122,22 @@ h5.over-title {
 .main-wrapper {
   position: relative;
 }
-
+.big-box{
+	display: inline-block;
+	padding:35px;
+	color: black;
+}
+.outer-box{
+	border:1px solid #6a6e6a;
+	padding:25px;
+	width:175px;
+	display: inline-block;
+	box-sizing: border-box;
+}
+.inner-box{
+	border:1px solid #6a6e6a;
+	padding-left:20px;
+}
 .ajax-white-backdrop {
   background-color: rgba(255, 255, 255, 0.5);
   display: none;
