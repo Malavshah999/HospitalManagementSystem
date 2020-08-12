@@ -4,6 +4,31 @@ error_reporting(0);
 include('include/config.php');
 include('include/checklogin.php');
 check_login();
+function fill_floor($con)  
+ {  
+      $output = '';  
+      $sql = "SELECT * FROM floor";  
+      $result = mysqli_query($con, $sql);  
+      while($row = mysqli_fetch_array($result))  
+      {  
+           $output .= '<option value="'.$row["floor_id"].'">'.$row["name"].'</option>';  
+      }  
+      return $output;  
+ }
+ function fill_product($con)  
+ {  
+      $output = '';  
+      $sql = "SELECT * FROM rooms";  
+      $result = mysqli_query($con, $sql);  
+      while($row = mysqli_fetch_array($result))  
+      {  
+           $output .= '<div class="col-md-3">';  
+           $output .= '<div style="border:1px solid #ccc; padding:20px; margin-bottom:20px;">'.$row["name"].'';  
+           $output .=     '</div>';  
+           $output .=     '</div>';  
+      }  
+      return $output;  
+ } 
 
 ?>
 <!DOCTYPE html>
@@ -17,7 +42,7 @@ check_login();
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
 <div id="app">
@@ -188,7 +213,7 @@ check_login();
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/admin.png" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
+									<img src="assets/images/admin.png" > <span class="username">Admin<i class="ti-angle-down"></i></span>
 								</a>
 
 								<ul class="dropdown-menu dropdown-dark">
@@ -217,64 +242,85 @@ check_login();
 	
 			
 
-				<div class="main-content" >
-					<div class="wrap-content container" id="container">
+				<div class="main-content container" >
+					<div class="wrap-content container">
 						<!-- start: PAGE TITLE -->
 						<section id="page-title">
-							<div class="row">
+							
 								<div class="col-sm-8">
-									<h1 style="color: black;" class="mainTitle">Dashboard</h1>
-								
-							</div>
+									<h1 style="color: black;" class="mainTitle">Ward setup </h1>
+								</div>
 						</section>
-			
-
-								<div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">	
-											<img src="assets/images/doctor.png" height="70" weight="100">
-											<h2 class="StepTitle">Manage Doctor's</h2>
-										
-											<p class="cl-effect-1">
-												<a href="manage-doctors.php">
-												<?php $result1 = mysqli_query($con,"SELECT * FROM doctors ");
-												$num_rows1 = mysqli_num_rows($result1);{?>
-											Total Doctors :<?php echo htmlentities($num_rows1);} ?>		
-
-												</a>	
-											</p>
-										</div>
+						<div class="container">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+							<center> Floor List 
+							<br>
+							<br>
+							<select name="floor" id="floor" style="width:150px;">
+							<option value="" >Select </option>
+							<?php echo fill_floor($con); ?>
+							</select>
+							<br>
+							<br>
+							<br>
+							<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Floor</button>
+					</center>
+					<div id="myModal" class="modal fade" role="dialog">
+						<form role="form" method="POST"> 
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Add New Floor</h4>
+									</div>
+									<div class="modal-body">
+										<p>
+											<div class="form-group">
+												<label for="room type">Floor Ward Name </label>					
+												<input type="text" name="ward_name" class="form-control"  placeholder="Enter Floor ward name" required />
+											</div>
+										</p>
+										<p>
+											<div class="form-group">
+												<label for="room availability">How many rooms ? </label>					
+												<input type="text" name="ward_description" class="form-control"  placeholder="Enter number of rooms " required />
+											</div>
+										</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" name="submit" id="submit" class="btn btn-default">Add</button>
 									</div>
 								</div>
-
-
-
-                                    <div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">
-														<img src="assets/images/patient.png" height="70" weight="100"><h2 class="StepTitle">Manage Patient's</h2>
-											
-											<p class="links cl-effect-1">
-												<a href="manage-patient.php">
-<?php $result = mysqli_query($con,"SELECT * FROM tblpatient ");
-$num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities($num_rows);} ?>		
-</a>
-											</p>
-										</div>
-									</div>
-								</div>						
+							</div>
+						</form>
 					</div>
-				</div>
-			</div>
+					</div>
+						<div class="col-md-9">
+						<br>
+						<center> Ward Floor Rooms </center>
+						<div class="inner-box"style="border:1px solid #6a6e6a; padding:10px;">
+							<div class="row" id="show_room">  
+								<?php echo fill_product($con);?>  
+							</div>	
+						</div>		
+						</div>
+						</div>
+						</div>
+						</div>
+
+</div>
+						
+		</div>
 
 <hr>
 
 
 					</div>
-				</div>
-			</div>
-		</div>
-		
+				
+			
 <!-- start: MAIN JAVASCRIPTS -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -283,13 +329,22 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 		<script src="assets/js/main.js"></script>
 		<!-- start: JavaScript Event Handlers for this page -->
 		<script src="assets/js/form-elements.js"></script>
-<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
-		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
-	</body>
-</html>
+
+
+<script>  
+ $(document).ready(function(){  
+      $('#floor').change(function(){  
+           var floor_id = $(this).val();  
+           $.ajax({  
+                url:"load_data.php",  
+                method:"POST",  
+                data:{floor_id:floor_id},  
+                success:function(data){  
+                     $('#show_room').html(data);  
+                }  
+           });  
+      });  
+ });  
+ </script> 
+ </body>
+ </html>

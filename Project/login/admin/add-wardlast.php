@@ -5,6 +5,19 @@ include('include/config.php');
 include('include/checklogin.php');
 check_login();
 
+
+if(isset($_POST['submit']))
+{
+$room_type=$_POST['room_type'];
+$room_availability=$_POST['room_availability'];
+$room_price=$_POST['room_price'];
+$sql=mysqli_query($con,"insert into ward(room_type,room_availability,room_price) values('$room_type','$room_availability','$room_price')");
+if($sql)
+{
+echo "<script>alert('Ward added Successfully');</script>";
+echo "<script>window.location.href ='room-setup.php'</script>";
+}
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -188,7 +201,7 @@ check_login();
 						
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
-									<img src="assets/images/admin.png" > <span class="username">Admin<i class="ti-angle-down"></i></i></span>
+									<img src="assets/images/admin.png" > <span class="username">Admin<i class="ti-angle-down"></i></span>
 								</a>
 
 								<ul class="dropdown-menu dropdown-dark">
@@ -217,55 +230,82 @@ check_login();
 	
 			
 
-				<div class="main-content" >
-					<div class="wrap-content container" id="container">
+				<div class="main-content container" >
+					<div class="wrap-content container">
 						<!-- start: PAGE TITLE -->
 						<section id="page-title">
-							<div class="row">
+							
 								<div class="col-sm-8">
-									<h1 style="color: black;" class="mainTitle">Dashboard</h1>
-								
-							</div>
+									<h1 style="color: black;" class="mainTitle">Ward setup </h1>
+								</div>
 						</section>
-			
-
-								<div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">	
-											<img src="assets/images/doctor.png" height="70" weight="100">
-											<h2 class="StepTitle">Manage Doctor's</h2>
-										
-											<p class="cl-effect-1">
-												<a href="manage-doctors.php">
-												<?php $result1 = mysqli_query($con,"SELECT * FROM doctors ");
-												$num_rows1 = mysqli_num_rows($result1);{?>
-											Total Doctors :<?php echo htmlentities($num_rows1);} ?>		
-
-												</a>	
-											</p>
-										</div>
+						<div class="container">
+						<div class="row">
+						<div class="col-md-3">
+						<br>
+							<center> Floor List 
+							<br>
+							<br>
+							<select style="width:150px;">
+							<option>Select </option>
+							<option> Floor 1 </option>
+							<option> Floor 2 </option>
+							</select>
+							<br>
+							<br>
+							<br>
+							<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Floor</button>
+					</center>
+					<div id="myModal" class="modal fade" role="dialog">
+						<form role="form" onSubmit="return valid();" method="POST"> 
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Add New Floor</h4>
+									</div>
+									<div class="modal-body">
+										<p>
+											<div class="form-group">
+												<label for="room type">Floor Ward Name </label>					
+												<input type="text" name="ward_name" class="form-control"  placeholder="Enter Floor ward name" required>
+											</div>
+										</p>
+										<p>
+											<div class="form-group">
+												<label for="room availability">How many rooms ? </label>					
+												<input type="text" name="ward_description" class="form-control"  placeholder="Enter number of rooms " required>
+											</div>
+										</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" name="submit" id="submit" class="btn btn-default">Add</button>
 									</div>
 								</div>
-
-
-
-                                    <div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">
-														<img src="assets/images/patient.png" height="70" weight="100"><h2 class="StepTitle">Manage Patient's</h2>
-											
-											<p class="links cl-effect-1">
-												<a href="manage-patient.php">
-<?php $result = mysqli_query($con,"SELECT * FROM tblpatient ");
-$num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities($num_rows);} ?>		
-</a>
-											</p>
-										</div>
-									</div>
-								</div>						
-					</div>
+							</div>
+						</form>
+					
 				</div>
-			</div>
+							
+						</div>
+						<div class="col-md-9">
+						<br>
+						<center> Ward Floor Rooms </center>
+						<div class=" col-md-1" style="border:1px solid #6a6e6a; padding:10px;">
+					<div style="border:1px solid #6a6e6a;">
+					<img src="patient1.png" height="20px" alt=""> 
+					</div>
+					<br>
+				
+					<div style="border:1px solid #6a6e6a;">
+					<img src="patient1.png" height="20px" alt="">
+					</div>	
+					</div>		
+						</div>
+						</div>
+						</div>
+						</div>
 
 <hr>
 
@@ -273,8 +313,7 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 					</div>
 				</div>
 			</div>
-		</div>
-		
+			
 <!-- start: MAIN JAVASCRIPTS -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -289,7 +328,5 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 				FormElements.init();
 			});
 		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
 	</body>
 </html>

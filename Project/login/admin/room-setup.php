@@ -5,9 +5,22 @@ include('include/config.php');
 include('include/checklogin.php');
 check_login();
 
+
+if(isset($_POST['submit']))
+{
+$room_type=$_POST['room_type'];
+$room_availability=$_POST['room_availability'];
+$room_price=$_POST['room_price'];
+$sql=mysqli_query($con,"insert into ward(room_type,room_availability,room_price) values('$room_type','$room_availability','$room_price')");
+if($sql)
+{
+echo "<script>alert('Ward added Successfully');</script>";
+echo "<script>window.location.href ='room-setup.php'</script>";
+}
+}
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html>
 	<head>
 		<title>Admin  | Dashboard</title>
 		<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
@@ -17,7 +30,8 @@ check_login();
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		
 	</head>
 	<body>
 <div id="app">
@@ -217,54 +231,93 @@ check_login();
 	
 			
 
-				<div class="main-content" >
+				<div class="main-content container" >
 					<div class="wrap-content container" id="container">
 						<!-- start: PAGE TITLE -->
 						<section id="page-title">
-							<div class="row">
+							
 								<div class="col-sm-8">
-									<h1 style="color: black;" class="mainTitle">Dashboard</h1>
-								
-							</div>
+									<h1 style="color: black;" class="mainTitle">Bed type setup </h1>
+								</div>
 						</section>
-			
-
-								<div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">	
-											<img src="assets/images/doctor.png" height="70" weight="100">
-											<h2 class="StepTitle">Manage Doctor's</h2>
-										
-											<p class="cl-effect-1">
-												<a href="manage-doctors.php">
-												<?php $result1 = mysqli_query($con,"SELECT * FROM doctors ");
-												$num_rows1 = mysqli_num_rows($result1);{?>
-											Total Doctors :<?php echo htmlentities($num_rows1);} ?>		
-
-												</a>	
-											</p>
-										</div>
+						
+			<div class="container">
+				<?php 
+				$sql=mysqli_query($con,"select * from ward");
+				while($row=mysqli_fetch_array($sql))
+					{   
+				?> 
+				<div class="row big-box">
+					<div><?php echo $row['room_type'];  ?>
+					<!--<div>
+							<a href="edit-ward.php?id=<?php //echo $row['id'];?>" class="btn btn-transparent btn-xs" tooltip-placement="top" tooltip="Edit">
+							<i class="fa fa-pencil"></i>
+							</a>
+							<a href="manage-ward.php?id=<?php //echo $row['id']?>&del=delete" onClick="return confirm('Are you sure you want to delete?')"class="btn btn-transparent btn-xs tooltips" tooltip-placement="top" tooltip="Remove">
+							<i class="fa fa-times fa fa-white"></i>
+							</a>
+					</div>--> 
+					</div>
+					<div class="outer-box">
+						<div class="inner-box">
+							<img src="patient1.png" height="50px" alt=""> 
+							<div>Availablity : <?php echo $row['room_availability']; ?> </div>
+						</div>
+						<br>
+						<div class="inner-box">
+							<img src="currency.png" height="40px" alt="">
+							<div>Amount : <?php echo $row['room_price']; ?> </div>	
+						</div>	
+						
+					</div>
+					
+					</div>
+					
+					<?php } ?>
+					</div>
+					
+					
+					<br>
+					<br>
+					<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Beds</button>
+					<div id="myModal" class="modal fade" role="dialog">
+						<form role="form" method="POST"> 
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Add New Beds</h4>
+									</div>
+									<div class="modal-body">
+										<p>
+											<div class="form-group">
+												<label for="room type">Bed Type </label>					
+												<input type="text" name="room_type" class="form-control"  placeholder="Enter Bed Type" required>
+											</div>
+										</p>
+										<p>
+											<div class="form-group">
+												<label for="room availability">Bed Availability </label>					
+												<input type="text" name="room_availability" class="form-control"  placeholder="Enter Bed availability" required>
+											</div>
+										</p>
+										<p>
+											<div class="form-group">
+												<label for="Room price">Bed Price </label>					
+												<input type="text" name="room_price" class="form-control"  placeholder="Enter Bed Price" required>
+											</div>
+										</p>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+										<button type="submit" name="submit" id="submit" class="btn btn-default">Add</button>
 									</div>
 								</div>
-
-
-
-                                    <div class="col-sm-6">
-									<div class="panel panel-white no-radius text-center">
-										<div class="panel-body">
-														<img src="assets/images/patient.png" height="70" weight="100"><h2 class="StepTitle">Manage Patient's</h2>
-											
-											<p class="links cl-effect-1">
-												<a href="manage-patient.php">
-<?php $result = mysqli_query($con,"SELECT * FROM tblpatient ");
-$num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities($num_rows);} ?>		
-</a>
-											</p>
-										</div>
-									</div>
-								</div>						
-					</div>
+							</div>
+						</form>
+					
 				</div>
+			</div>
 			</div>
 
 <hr>
@@ -273,7 +326,6 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 					</div>
 				</div>
 			</div>
-		</div>
 		
 <!-- start: MAIN JAVASCRIPTS -->
 		<script src="vendor/jquery/jquery.min.js"></script>
@@ -289,7 +341,5 @@ $num_rows = mysqli_num_rows($result);{?>Total Patients :<?php echo htmlentities(
 				FormElements.init();
 			});
 		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
 	</body>
 </html>
