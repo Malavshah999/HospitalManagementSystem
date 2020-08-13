@@ -38,7 +38,8 @@ echo "<script>window.location.href ='manage-patient.php'</script>";
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
-
+<link rel="stylesheet" href="assets/css/respnsivestyle.css">
+		
 	<script>
 function userAvailability() {
 $("#loaderIcon").show();

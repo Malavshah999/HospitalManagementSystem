@@ -19,6 +19,7 @@ check_login();
 		<link rel="stylesheet" href="assets/css/plugins.css">
 		<link rel="stylesheet" href="assets/css/themes/theme-1.css" id="skin_color" />
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	</head>
 	<body>
