@@ -76,8 +76,8 @@ echo '<script> window.location="index.php"; </script>';
 
 
 <br><br>
-<p style="color: blue;float:center;text-align: center;">New To Patient Login?</p>
-<button class="but2"><a href="../../Signup/patientsignup/signuppateint.php">Signup Here!</button></a>
+<p style="color:#28288a;float:center;text-align:center;">New To Patient Login ?</p>
+<button class="but2"><a href="../../Signup/patientsignup/signuppateint.php">Signup Here !</a></button>
 									
 						</fieldset>
 					

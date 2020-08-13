@@ -54,7 +54,7 @@ include './controllers/db_connection.php' ;
 				</button>
 
 <br><br>
-<p>Already have an account?<a href="../../login/patient/index.php"> Login Now!</a></p>
+<p><h4>Already have an account?<a href="../../login/patient/index.php"> Login Now!</a></h4></p>
 
 
 

@@ -88,8 +88,8 @@ exit();
 <input type="button" class="btn btn-primary pull-left" value="Go Back!" onclick="history.back(-1)" /></div>
 					
 <br><br>
-<p style="color: blue;float:center;text-align: center;">New To Doctor Login?</p>
-<button class="but2"><a href="../../Signup/doctorsignup/signupdoctor.php">Signup Here!</button></a>
+<p style="color:#28288a;float:center;text-align:center;">New To Doctor Login ?</p>
+<button class="but2"><a href="../../Signup/doctorsignup/signupdoctor.php">Signup Here !</button></a>
 		
 						</fieldset>					
 					
