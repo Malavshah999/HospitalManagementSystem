@@ -85,7 +85,7 @@ exit();
 							<div class="form-actions">
 <button type="submit" class="btn btn-primary pull-right" name="submit">Login <i class="fa fa-arrow-circle-right"></i>
 								</button>
-<input type="button" class="btn btn-primary pull-left" value="Go Back!" onclick="history.back(-1)" /></div>
+<input type="button" class="btn btn-primary pull-left" value="Go Back!" onclick="location.href = '../../index.php';" /></div>
 					
 <br><br>
 <p style="color:#28288a;float:center;text-align:center;">New To Doctor Login ?</p>
