@@ -22,8 +22,8 @@ function fill_floor($con)
       $result = mysqli_query($con, $sql);  
       while($row = mysqli_fetch_array($result))  
       {  
-           $output .= '<div class="col-md-3">';  
-           $output .= '<div style="border:1px solid #6a6e6a; padding:10px;">'.$row["room_name"].'';  
+           $output .= '<div class="big-box">';  
+           $output .= '<div class="outer-box">'.$row["room_name"].'<br>Bed Available : '.$row["bed_available"];  
            $output .=     '</div>';  
            $output .=     '</div>';  
       }  
@@ -44,7 +44,8 @@ if(isset($_POST['submit1']))
 {
 $room_name=$_POST['room_name'];
 $floor_id=$_POST['floor_id'];
-$sql=mysqli_query($con,"insert into rooms(room_name,floor_id) values('$room_name','$floor_id')");
+$bed_available=$_POST['bed_available'];
+$sql=mysqli_query($con,"insert into rooms(room_name,bed_available,floor_id) values('$room_name','$bed_available','$floor_id')");
 if($sql)
 {
 echo "<script>alert('Room added Successfully');</script>";
@@ -272,112 +273,93 @@ echo "<script>window.location.href ='add-ward.php'</script>";
 								</div>
 						</section>
 						<div class="container">
-						<div class="row">
-						<div class="col-md-3">
-						<br>
-							<center> Floor List 
-							<br>
-							<br>
-							<select name="floor" id="floor" style="width:150px;">
-							<option value="" >Select </option>
-							<?php echo fill_floor($con); ?>
-							</select>
-							<br>
-							<br>
-							<br>
-							<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Floor</button>
-					</center>
-					<div id="myModal" class="modal fade" role="dialog">
-						<form role="form" method="POST"> 
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title"><center> New Floor</center></h4>
-									</div>
-									<div class="modal-body">
-										<p>
-											<div class="form-group">
-												<label for="room type">Floor Ward Name </label>					
-												<input type="text" name="name" class="form-control"  placeholder="Enter Floor ward name" required />
+							<div class="row">
+								<div class="col-md-3"><br>
+									<center> Floor List <br>	<br>
+										<select name="floor" id="floor" style="width:150px;">
+											<option value="" >Select </option>
+												<?php echo fill_floor($con); ?>
+										</select><br><br><br>
+										<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Floor</button>
+									</center>
+									<div id="myModal" class="modal fade" role="dialog">
+										<form role="form" method="POST"> 
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title"><center> New Floor</center></h4>
+													</div>
+													<div class="modal-body"><p>
+														<div class="form-group">
+															<label for="room type">Floor Ward Name </label>					
+															<input type="text" name="name" class="form-control"  placeholder="Enter Floor ward name" required />
+														</div></p><p>
+														<div class="form-group">
+															<label for="room availability">How many rooms ? </label>					
+															<input type="text" name="" class="form-control"  placeholder="Enter number of rooms " required />
+														</div></p>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+														<button type="submit" name="submit" id="submit" class="btn btn-default">Add</button>
+													</div>
+												</div>
 											</div>
-										</p>
-										<p>
-											<div class="form-group">
-												<label for="room availability">How many rooms ? </label>					
-												<input type="text" name="" class="form-control"  placeholder="Enter number of rooms " required />
-											</div>
-										</p>
+										</form>
 									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										<button type="submit" name="submit" id="submit" class="btn btn-default">Add</button>
+								</div>
+								<div class="col-md-9"><br>
+									<center> Ward Floor Rooms </center>
+									<div class="big-box">
+										<div class="row" id="show_room">  
+							
+											<?php echo fill_rooms($con);?>  
+								
+										</div>	<br>
+									</div>	<br> <br>
+									<center>
+										<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal1"> Add New Room</button>
+									</center>
+									<div id="myModal1" class="modal fade" role="dialog">
+										<form role="form" method="POST"> 
+											<div class="modal-dialog">
+												<div class="modal-content">
+													<div class="modal-header">
+														<button type="button" class="close" data-dismiss="modal">&times;</button>
+														<h4 class="modal-title"><center> New Room</center></h4>
+													</div>
+													<div class="modal-body">
+														<div class="form-group">
+															<label for="room type">Room name </label>					
+															<input type="text" name="room_name" class="form-control"  placeholder="Enter Floor room name" required />
+														</div>
+														<div class="form-group">
+															<label for="room availability">How many beds ? </label>					
+															<input type="text" name="bed_available" class="form-control"  placeholder="Enter number of beds " required />
+														</div>
+														<div class="form-group">
+															<label for="room availability">Which floor ? </label>					
+															<input type="text" name="floor_id" class="form-control"  placeholder="Enter floor number " required />
+														</div>
+													</div>
+													<div class="modal-footer">
+														<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+														<button type="submit" name="submit1" id="submit1" class="btn btn-default">Add</button>
+													</div>
+												</div>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
-						</form>
-					</div>
-					</div>
-						<div class="col-md-9">
-						<br>
-						<center> Ward Floor Rooms </center>
-						<div style="border:1px solid #6a6e6a; padding:10px;">
-							<div class="row" id="show_room">  
-								<?php echo fill_rooms($con);?>  
-							</div>	
-							<br>
-						</div>	<br> <br>
-						<center>
-							<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal1"> Add New Room</button>
-					</center>
-					<div id="myModal1" class="modal fade" role="dialog">
-						<form role="form" method="POST"> 
-							<div class="modal-dialog">
-								<div class="modal-content">
-									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4 class="modal-title"><center> New Room</center></h4>
-									</div>
-									<div class="modal-body">
-										
-											<div class="form-group">
-												<label for="room type">Room name </label>					
-												<input type="text" name="room_name" class="form-control"  placeholder="Enter Floor ward name" required />
-											</div>
-									
-											<div class="form-group">
-												<label for="room availability">How many beds ? </label>					
-												<input type="text" name="" class="form-control"  placeholder="Enter number of rooms " required />
-											</div>
-											
-											<div class="form-group">
-												<label for="room availability">Which floor ? </label>					
-												<input type="text" name="floor_id" class="form-control"  placeholder="Enter number of rooms " required />
-											</div>
-									</div>
-									<div class="modal-footer">
-										<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-										<button type="submit" name="submit1" id="submit1" class="btn btn-default">Add</button>
-									</div>
-								</div>
-							</div>
-						</form>
 						</div>
+					</div>
 				</div>
-						</div>
-						</div>
-						</div>
-
-</div>
 						
-		</div>
-
-<hr>
-
-
-					</div>
+		</div><hr>	
+	</div>
 				
-			
 <!-- start: MAIN JAVASCRIPTS -->
 		<script src="vendor/jquery/jquery.min.js"></script>
 		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
