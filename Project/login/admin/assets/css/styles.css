@@ -138,6 +138,13 @@ h5.over-title {
 	border:1px solid #6a6e6a;
 	padding-left:20px;
 }
+.first-div{
+	border:1px solid #6a6e6a; 
+	padding:10px;
+}
+.second-div{
+	
+}
 .ajax-white-backdrop {
   background-color: rgba(255, 255, 255, 0.5);
   display: none;

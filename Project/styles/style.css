@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Numans');
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon/icomoon.eot?srf3rx");
@@ -11,7 +12,7 @@
 *
 * ======================================================= */
 body {
-  font-family: "Poppins", Arial, sans-serif;
+font-family:Numans;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.7;
@@ -120,7 +121,7 @@ h1, h2, h3, h4, h5, h6, figure {
     padding: 0;
     text-transform: uppercase;
     font-weight: 700;
-    font-family: "Poppins", Arial, sans-serif; }
+  font-family:Numans; }
     @media screen and (max-width: 768px) {
       .colorlib-nav #colorlib-logo {
         text-align: left !important;
@@ -317,7 +318,7 @@ h1, h2, h3, h4, h5, h6, figure {
           line-height: 1.5;
           margin-bottom: 30px;
           font-weight: 300;
-          font-family: "Poppins", Arial, sans-serif; }
+        font-family:Numans; }
           #colorlib-hero .flexslider .slider-text > .slider-text-inner h2 a {
             color: rgba(255, 255, 255, 0.5); }
         #colorlib-hero .flexslider .slider-text > .slider-text-inner .doc-holder {
@@ -1007,7 +1008,7 @@ h1, h2, h3, h4, h5, h6, figure {
     #colorlib-register .countdown small {
       display: block;
       font-size: 16px;
-      font-family: "Poppins", Arial, sans-serif; }
+    font-family:Numans; }
   #colorlib-register .btn i {
     margin-left: 20px; }
 
@@ -1359,7 +1360,7 @@ h1, h2, h3, h4, h5, h6, figure {
       font-size: 16px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      font-family: "Poppins", Arial, sans-serif;
+    font-family:Numans;
       color: #fff; }
   #colorlib-footer .form-group input[type="name"],
   #colorlib-footer .form-group input[type="text"],

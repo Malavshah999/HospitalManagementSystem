@@ -1,4 +1,8 @@
-<?php
+<html>
+<head>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+</html><?php
 session_start();
 error_reporting(0);
 include('include/config.php');
@@ -18,7 +22,7 @@ check_login();
       $result = mysqli_query($con, $sql);  
       while($row = mysqli_fetch_array($result))  
       {  
-           $output .= '<div class="col-md-3"><div style="border:1px solid #6a6a6e; padding:20px;">'.$row["room_name"].'</div></div>';  
+           $output .= '<div class="big-box"><div class="outer-box">'.$row["room_name"].'<br>Bed Available : '.$row["bed_available"].'</div></div>';  
       }  
       echo $output;  
  }  
