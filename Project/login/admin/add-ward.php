@@ -120,7 +120,7 @@
 							<a href="javascript:void(0)">
 								<div class="item-content">
 									<div class="item-media">
-										<i class="ti-user"></i>
+										<i class="ti-wheelchair"></i>
 									</div>
 									<div class="item-inner">
 										<span class="title"> Patients </span><i class="icon-arrow"></i>
@@ -144,7 +144,7 @@
 							<a href="javascript:void(0)">
 								<div class="item-content">
 									<div class="item-media">
-										<i class="ti-user"></i>
+										<i class="ti-layout"></i>
 									</div>
 									<div class="item-inner">
 										<span class="title"> Ward </span><i class="icon-arrow"></i>

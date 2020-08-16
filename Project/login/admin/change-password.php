@@ -130,7 +130,7 @@ return true;
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-wheelchair"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Patients </span><i class="icon-arrow"></i>
@@ -152,12 +152,33 @@ return true;
 									
 								</ul>
 								</li>	
-
-
-
-
-
 								<li>
+								<a href="javascript:void(0)">
+									<div class="item-content">
+										<div class="item-media">
+											<i class="ti-layout"></i>
+										</div>
+										<div class="item-inner">
+											<span class="title"> Ward </span><i class="icon-arrow"></i>
+										</div>
+									</div>
+								</a>
+								<ul class="sub-menu">
+									
+									<li>
+										<a href="add-ward.php">
+											<span class="title"> Manage Ward </span>
+										</a>
+									</li>
+									<li>
+										<a href="room-setup.php">
+											<span class="title"> Room type setup </span>
+										</a>
+									</li>
+									
+								</ul>
+							</li>
+							<li>
 								<a href="patient-search.php">
 									<div class="item-content">
 										<div class="item-media">

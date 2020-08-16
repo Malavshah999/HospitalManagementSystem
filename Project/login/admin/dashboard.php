@@ -33,7 +33,7 @@ check_login();
 								<a href="dashboard.php">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-home"></i>
+										<i class="ti-home"></i>
 										</div>
 
 										<div class="item-inner">
@@ -73,15 +73,12 @@ check_login();
 									</li>
 									
 								</ul>
-								</li>
-
-
-
-								<li>
+							</li>
+							<li>
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-wheelchair"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Patients </span><i class="icon-arrow"></i>
@@ -102,12 +99,12 @@ check_login();
 									</li>
 									
 								</ul>
-								</li>	
-								<li>
+							</li>	
+							<li>
 								<a href="javascript:void(0)">
 									<div class="item-content">
 										<div class="item-media">
-											<i class="ti-user"></i>
+											<i class="ti-layout"></i>
 										</div>
 										<div class="item-inner">
 											<span class="title"> Ward </span><i class="icon-arrow"></i>
@@ -128,12 +125,8 @@ check_login();
 									</li>
 									
 								</ul>
-								</li>
-
-
-
-
-								<li>
+							</li>
+							<li>
 								<a href="patient-search.php">
 									<div class="item-content">
 										<div class="item-media">
