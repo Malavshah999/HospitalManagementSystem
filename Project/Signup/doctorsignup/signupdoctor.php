@@ -7,9 +7,7 @@ include './controllers/db_connection.php' ;
 <html>
 <head>
 	<title>Signup_Doctor's Form</title>
-	<!-- LINEARICONS -->
 	<link rel="stylesheet" href="fonts/linearicons/style.css">	
-	<!-- STYLE CSS -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>

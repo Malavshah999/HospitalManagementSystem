@@ -17,7 +17,6 @@
 		
 		<div class="home">
 			<div class="parallax_background parallax-window" style="opacity:0.5;" data-parallax="scroll"  data-image-src="images/box_1.jpg"></div>
-			<!-- Header -->
 			<header class="header" id="header">
 				<div>
 					<div class="header_top">
@@ -78,7 +77,6 @@
 				<div class="section_subtitle">too choose from</div>
 			</div>
 		</div>	
-		<!-- About -->
 		<div class="row about_row row-eq-height">
 			<div class="col-lg-4">
 				<p>Our <b>mission</b> is to care for our patients and their families when it matters most.</p>
@@ -98,13 +96,11 @@
 		</div>
 	</div>
 
-	<!-- Milestones -->
 
 	<div class="milestones">
 		<div class="container">
 			<div class="row">
 
-				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone d-flex flex-row align-items-center justify-content-start">
 						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_7.svg" alt=""></div>
@@ -116,7 +112,6 @@
 
 				</div>
 
-				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone d-flex flex-row align-items-center justify-content-start">
 						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_6.svg" alt=""></div>
@@ -127,7 +122,6 @@
 					</div>
 				</div>
 
-				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone d-flex flex-row align-items-center justify-content-start">
 						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_8.svg" alt=""></div>
@@ -139,7 +133,6 @@
 					</div>
 				</div>
 
-				<!-- Milestone -->
 				<div class="col-lg-3 milestone_col">
 					<div class="milestone d-flex flex-row align-items-center justify-content-start">
 						<div class="milestone_icon d-flex flex-column align-items-center justify-content-center"><img src="images/icon_9.svg" alt=""></div>
@@ -153,8 +146,6 @@
 			</div>
 		</div>
 	</div>
-
-<!-- Doctors List-->
 
 	<div class="text-center">
 		<div class="section_title"><hr><br>Our Best Doctors</div>
@@ -304,7 +295,6 @@
 		</div>
 	</div>	
 	
-	<!-- Patient Reviews -->
 	<hr>
 	<br>
 	<div class="text-center section_title">Patients Reviews</div>
@@ -387,14 +377,11 @@
 	</div>
 	<hr>
 	
-	<!-- Footer -->
-
 	<footer class="footer">
 		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/footer.jpg" data-speed="0.8"></div>
 		<div class="footer_content">
 			<div class="container">
 				<div class="row">
-					<!-- About -->
 					<div class="col-lg-3 footer_col">
 						<div class="footer_about">
 							<div class="HMS">
@@ -407,7 +394,6 @@
 							</div>
 						</div>
 					</div>
-					<!-- Footer Contact -->
 					<div class="col-lg-5 footer_col">
 						<div class="footer_contact">
 							<div class="footer_contact_title">Quick Contact</div>
@@ -423,9 +409,7 @@
 							</div>
 						</div>
 					</div>
-
-					<!-- Footer Hours -->
-					<div class="col-lg-4 footer_col">
+				<div class="col-lg-4 footer_col">
 						<div class="footer_hours">
 							<div class="footer_hours_title">Opening Hours</div>
 							<ul class="hours_list">
@@ -454,18 +438,10 @@
 	</footer>
 
 	<script>
-	
-		// Get the Modal 
 		var modalparent = document.getElementsByClassName("modal_multi");
-	
-		// Get the button that opens the modal
-		var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
-	
-		// Get the <span> element that closes the modal
+	    var modal_btn_multi = document.getElementsByClassName("myBtn_multi");
 		var span_close_multi = document.getElementsByClassName("close_multi");
-	
-		// When the user clicks the button, open the modal
-		function setDataIndex() {
+	    function setDataIndex() {
 			for (i = 0; i < modal_btn_multi.length; i++){
 				modal_btn_multi[i].setAttribute('data-index', i);
 				modalparent[i].setAttribute('data-index', i);
@@ -478,7 +454,6 @@
 				var ElementIndex = this.getAttribute('data-index');
 				modalparent[ElementIndex].style.display = "block";
 			};
-			//When the user clicks on <span> (x), close the modal
 			span_close_multi[i].onclick = function(){
 				var ElementIndex = this.getAttribute('data-index');
 				modalparent[ElementIndex].style.display = "none";

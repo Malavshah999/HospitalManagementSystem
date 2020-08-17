@@ -7,9 +7,7 @@ include './controllers/db_connection.php' ;
 <html>
 <head>
 	<title>Signup_Patient's Form</title>
-	<!-- LINEARICONS -->
 	<link rel="stylesheet" href="fonts/linearicons/style.css">	
-	<!-- STYLE CSS -->
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -53,10 +51,8 @@ include './controllers/db_connection.php' ;
 					<span>Register</span>
 				</button>
 
-<br><br>
-<p><h4>Already have an account?<a href="../../login/patient/index.php"> Login Now!</a></h4></p>
-
-
+  <br><br>
+  <p><h4>Already have an account?<a href="../../login/patient/index.php"> Login Now!</a></h4></p>
 
 			</form>
 

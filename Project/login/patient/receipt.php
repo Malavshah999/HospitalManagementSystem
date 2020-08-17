@@ -68,7 +68,7 @@
 				<br>
 				<div class="row">
 					<div class="col-25">
-						<button class="button" >Print Receipt</button>
+						<button onclick="myprint()" class="button" >Print Receipt</button>
 					</div>
 				</div>
   
@@ -80,6 +80,12 @@
 		echo "<script>location.href='index.php'</script>";
 	}
 	?>
-
+<script type="text/javascript">
+	
+	function myprint()
+	{
+		window.print();
+	}
+</script>
 </body>
 </html>
