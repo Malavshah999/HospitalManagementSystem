@@ -141,17 +141,18 @@ check_login();
 							</li>
 						
 						
+							
 							<li class="dropdown current-user">
 								<a href class="dropdown-toggle" data-toggle="dropdown">
 									<img src="assets/images/doctor-icon-vector-11004500.jpg" > 
 									<span class="username">
-									<?php $query=mysqli_query($con,"select fullname from doctorsignup where id='".$_SESSION['id']."'"); 
+									<?php $query=mysqli_query($con,"select doctorName from doctors where id='".$_SESSION['id']."'"); 
                                while($row=mysqli_fetch_array($query))
                              {
-                                 	echo $row['fullname'];
+                                 	echo $row['doctorName'];
                               }
 									?> 
-									<i class="ti-angle-down"></i></i></span></a>
+										<i class="ti-angle-down"></i></i></span></a>
 
 								<ul class="dropdown-menu dropdown-dark">
 									

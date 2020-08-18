@@ -237,7 +237,6 @@
 	</footer>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="styles/bootstrap4/bootstrap.min.js"></script>
-<script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/custom.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>

@@ -112,7 +112,7 @@
 		echo "<script>location.href='patientlogin.php'</script>";
 	}
 	?>
-	
+
 <script type="text/javascript">
 	
 	function myprint()
@@ -120,6 +120,7 @@
 		window.print();
 	}
 </script>
+
 
 </body>
 </html>
