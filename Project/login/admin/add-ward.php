@@ -24,7 +24,7 @@
       {  
     	$output .= '<div class="big-box">';  
     	$output .= '<div class="outer-box">'.$row["room_name"].'<br>Bed Available : '.$row["bed_available"];  
-		$output .= '<br><br><button type="button" data-toggle="modal" data-target="#myModal1" class="btn btn-transparent btn-xs" tooltip="Edit"><i class="fa fa-pencil"></i></button>';
+		$output .= '<br><br><button type="button" data-toggle="modal" data-target="#myModal2" class="btn btn-transparent btn-xs" tooltip="Edit"><i class="fa fa-pencil"></i></button>';
 		$output .= '</div>';  
     	$output .= '</div>';  
       }  
@@ -257,6 +257,7 @@
 									</select><br><br><br>
 									<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal"> Add New Floor</button>
 								</center>
+								<!-- For Add new Floor-->
 								<div id="myModal" class="modal fade" role="dialog">
 									<form role="form" method="POST"> 
 										<div class="modal-dialog">
@@ -283,32 +284,7 @@
 										</div>
 									</form>
 								</div>
-								<div id="myModal1" class="modal fade" role="dialog">
-									<form role="form" method="POST"> 
-										<div class="modal-dialog">
-											<div class="modal-content">
-												<div class="modal-header">
-													<button type="button" class="close" data-dismiss="modal">&times;</button>
-													<h4 class="modal-title"><center> Update Beds available  </center></h4>
-												</div>
-												<div class="modal-body"><p>
-													<div class="form-group">
-														<label for="room type">How many Beds available ?  </label>					
-														<input type="text" name="bed_available" class="form-control"  placeholder="Enter number of beds available" required />
-													</div></p><p>
-													<div class="form-group">
-														<label for="room availability">Room name  </label>					
-														<input type="text" name="room_name" class="form-control"  placeholder="Enter room name " required />
-													</div></p>
-												</div>
-												<div class="modal-footer">
-													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-													<button type="submit2" name="submit2" id="submit2" class="btn btn-default">Update</button>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
+								
 							</div>
 							<div class="col-md-9"><br>
 								<center> Ward Floor Rooms </center>
@@ -321,8 +297,9 @@
 								<center>
 									<button type="button" class="btn btn-o btn-primary" data-toggle="modal" data-target="#myModal1"> Add New Room</button>
 								</center>
+								<!-- For Add new Room-->
 								<div id="myModal1" class="modal fade" role="dialog">
-									<form role="form" method="POST"> 
+									<form role="form" method="POST">
 										<div class="modal-dialog">
 											<div class="modal-content">
 												<div class="modal-header">
@@ -346,6 +323,33 @@
 												<div class="modal-footer">
 													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 													<button type="submit" name="submit1" id="submit1" class="btn btn-default">Add</button>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+								<!-- For Edit Update Beds -->
+								<div id="myModal2" class="modal fade" role="dialog">
+									<form role="form" method="POST"> 
+										<div class="modal-dialog">
+											<div class="modal-content">
+												<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal">&times;</button>
+													<h4 class="modal-title"><center> Update Beds available  </center></h4>
+												</div>
+												<div class="modal-body"><p>
+													<div class="form-group">
+														<label for="room type">How many Beds available ?  </label>					
+														<input type="text" name="bed_available" class="form-control"  placeholder="Enter number of beds available" required />
+													</div></p><p>
+													<div class="form-group">
+														<label for="room availability">Room name  </label>					
+														<input type="text" name="room_name" class="form-control"  placeholder="Enter room name " required />
+													</div></p>
+												</div>
+												<div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="submit2" name="submit2" id="submit2" class="btn btn-default">Update</button>
 												</div>
 											</div>
 										</div>

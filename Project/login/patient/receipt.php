@@ -67,8 +67,9 @@
 				</div>
 				<br>
 				<div class="row">
-					<div class="col-25">
+					<div class="col-25"><br>
 						<button onclick="myprint()" class="button" >Print Receipt</button>
+						<button style="margin-right:10px ;" onclick="dashobard.php" class="button" >Back to Home</button>
 					</div>
 				</div>
   
